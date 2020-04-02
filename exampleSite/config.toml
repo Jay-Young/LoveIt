@@ -213,6 +213,9 @@ enableEmoji = true
         # Skype = true
         # Trello = true
         # Mix = true
+        # Weixin = true
+        # Douban = true
+        # Qzone = true
       # Comment Config
       [languages.en.params.comment]
         enable = true

@@ -138,7 +138,7 @@
 
     {{- /* 020: 人人 */ -}}
     {{- if .Params.Share.Renren | default .Site.Params.Share.Renren | eq true -}}
-        <a href="javascript:void(0);" title="{{ T `shareOn` }} 人人" data-sharer="renren" data-url="{{ .Permalink }}">
+        <a href="javascript:void(0);" title="{{ T `shareOn` }} 人人" data-sharer="renren" data-url="{{ .Permalink }}" data-title="{{ .Title }}" data-description="{{ .Description }}"{{ with .Params.featuredImage }} data-image="{{ . }}"{{ end }}>
             {{- partial "plugin/icon.html" (dict "class" "fab fa-renren fa-fw") -}}
         </a>
     {{- end -}}
@@ -159,7 +159,7 @@
 
     {{- /* 023: 百度 */ -}}
     {{- if .Params.Share.Baidu | default .Site.Params.Share.Baidu | eq true -}}
-        <a href="javascript:void(0);" title="{{ T `shareOn` }} 百度" data-sharer="baidu" data-url="{{ .Permalink }}" data-title="{{ .Title }}">
+        <a href="javascript:void(0);" title="{{ T `shareOn` }} 百度" data-sharer="baidu" data-url="{{ .Permalink }}" data-title="{{ .Title }}"{{ with .Params.featuredImage }} data-image="{{ . }}"{{ end }}>
             {{- partial "plugin/icon.html" (dict "class" "loveit it-baidu-fill" "type" "other" "scratch" $scratch) -}}
         </a>
     {{- end -}}
@@ -196,6 +196,27 @@
     {{- if .Params.Share.Mix | default .Site.Params.Share.Mix | eq true -}}
         <a href="//mix.com/add?url={{ .Permalink }}&amp;description={{ .Title }}" target="_blank" title="{{ T `shareOn` }} Mix">
             {{- partial "plugin/icon.html" (dict "class" "fab fa-mix fa-fw") -}}
+        </a>
+    {{- end -}}
+
+    {{- /* 029: 微信 */ -}}
+    {{- if .Params.Share.Weixin | default .Site.Params.Share.Weixin | eq true -}}
+        <a href="javascript:void(0);" title="{{ T `shareOn` }} 微信" data-sharer="weixin" data-url="{{ .Permalink }}">
+            {{- partial "plugin/icon.html" (dict "class" "fab fa-weixin fa-fw") -}}
+        </a>
+    {{- end -}}
+
+    {{- /* 030: 豆瓣 */ -}}
+    {{- if .Params.Share.Douban | default .Site.Params.Share.Douban | eq true -}}
+        <a href="javascript:void(0);" title="{{ T `shareOn` }} 豆瓣" data-sharer="douban" data-url="{{ .Permalink }}" data-title="{{ .Title }}"{{ with .Params.featuredImage }} data-image="{{ . }}"{{ end }}>
+            {{- partial "plugin/icon.html" (dict "class" "loveit it-douban-fill" "type" "other" "scratch" $scratch) -}}
+        </a>
+    {{- end -}}
+
+    {{- /* 031: QQ空间 */ -}}
+    {{- if .Params.Share.Qzone | default .Site.Params.Share.Qzone | eq true -}}
+        <a href="javascript:void(0);" title="{{ T `shareOn` }} QQ空间" data-sharer="qzone" data-url="{{ .Permalink }}" data-title="{{ .Title }}" data-description="{{ .Description }}"{{ with .Params.featuredImage }} data-image="{{ . }}"{{ end }}>
+            {{- partial "plugin/icon.html" (dict "class" "fab fa-qq fa-fw") -}}
         </a>
     {{- end -}}
 {{- end -}}
