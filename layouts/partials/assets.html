@@ -217,6 +217,15 @@
     {{- end -}}
 {{- end -}}
 
+{{- /* live2d-widget */ -}}
+{{- if ne .Site.Params.live2dwidget false -}}
+    {{- with $CDN.live2dwidgetJS -}}
+        {{- slice . | $scratch.Add "scriptCDN" -}}
+    {{- else -}}
+        {{- slice "lib/live2d-widget/autoload.js" | $scratch.Add "scriptLocal" -}}
+    {{- end -}}
+{{- end -}}
+
 {{- /* Dev feature */ -}}
 {{- if .Params.dev -}}
 {{- end -}}
