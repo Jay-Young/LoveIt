@@ -749,7 +749,7 @@ enableEmoji = true
   fingerprint = ""
   # enable or disable live2d-widget
   # 是否启用 live2d-widget 看板娘
-  # live2dwidget = true
+  live2dwidget = false
   # Header info
   # 页面头部导航栏信息
   [params.header]
