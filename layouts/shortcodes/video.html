@@ -1,0 +1,39 @@
+{{- $scratch := .Page.Scratch.Get "scratch" -}}
+
+{{- if .IsNamedParams -}}
+    {{- if .Get "url" -}}
+    <div id="{{ .Get `id` }}"></div>
+    <script>
+      function loadDPlayer(){
+        let dp = new DPlayer({
+          container: document.getElementById({{ .Get `id` }}),
+          autoplay: {{ .Get `autoplay` | default false }},
+          theme: {{ .Get `theme` | default `#b7daff` }},
+          loop: {{ .Get `loop` | default false }},
+          lang: {{ .Get `lang` | default `zh-cn` }},
+          screenshot: {{ .Get `screenshot` | default true }},
+          hotkey: {{ .Get `hotkey` | default true }},
+          preload: {{ .Get `preload` | default `auto` }},
+          logo: {{ .Get `logo` }},
+          volume: {{ .Get `volume` | default 0.7 }},
+          mutex: {{ .Get `mutex` | default true }},
+          video: {
+              url: {{ .Get `url` }},
+              pic: {{ .Get `pic` }},
+              thumbnails: {{ .Get `thumbnails` }},
+              type: {{ .Get `type` | default `auto` }},
+          },
+          subtitle: {
+              url: {{ .Get `sub` }},
+              type: {{ .Get `subtype` | default `webvtt` }},
+              fontSize: {{ .Get `fontsize` | default `20px` }},
+              bottom: {{ .Get `bottom` | default `10%` }},
+              color: {{ .Get `color` | default `#b7daff` }},
+          },
+        });
+      }
+      document.addEventListener('DOMContentLoaded', loadDPlayer, !1);
+    </script>
+    {{- end -}}
+{{- end -}}
+{{- $scratch.Set "video" true -}}

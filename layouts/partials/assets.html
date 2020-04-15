@@ -226,6 +226,33 @@
     {{- end -}}
 {{- end -}}
 
+{{- /* Video */ -}}
+{{- if ne .Site.Params.DPlayer false -}}
+    {{- if $scratch.Get "video" -}}
+        {{- /* DPlayer */ -}}
+        {{- with $CDN.dplayerCSS -}}
+            {{- slice . | $scratch.Add "linkCDN" -}}
+        {{- else -}}
+            {{- slice "lib/dplayer/DPlayer.min.css" | $scratch.Add "linkLocal" -}}
+        {{- end -}}
+        {{- with $CDN.hlsJS -}}
+        {{- slice . | $scratch.Add "scriptCDN" -}}
+        {{- else -}}
+            {{- slice "lib/dplayer/hls.min.js" | $scratch.Add "scriptLocal" -}}
+        {{- end -}}
+        {{- with $CDN.flvJS -}}
+        {{- slice . | $scratch.Add "scriptCDN" -}}
+        {{- else -}}
+            {{- slice "lib/dplayer/flv.min.js" | $scratch.Add "scriptLocal" -}}
+        {{- end -}}
+        {{- with $CDN.dplayerJS -}}
+            {{- slice . | $scratch.Add "scriptCDN" -}}
+        {{- else -}}
+            {{- slice "lib/dplayer/DPlayer.min.js" | $scratch.Add "scriptLocal" -}}
+        {{- end -}}
+    {{- end -}}
+{{- end -}}
+
 {{- /* Dev feature */ -}}
 {{- if .Params.dev -}}
 {{- end -}}
