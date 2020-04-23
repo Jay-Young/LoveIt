@@ -5,9 +5,9 @@
 [![License](https://img.shields.io/github/license/dillonzq/LoveIt?style=flat-square)](https://github.com/dillonzq/LoveIt/blob/master/LICENSE)
 [![CircleCI](https://img.shields.io/circleci/build/github/dillonzq/LoveIt/develop?label=CI&style=flat-square&logo=circleci)](https://app.circleci.com/pipelines/github/dillonzq/LoveIt)
 
-[English README](https://github.com/dillonzq/LoveIt/blob/master/README.md) | 中文说明
+[English README](https://github.com/dillonzq/LoveIt/blob/master/README.md) | 简体中文说明
 
-[LoveIt](https://github.com/dillonzq/LoveIt) 是一个**简洁**、**优雅**且**高效**的 [Hugo](https://gohugo.io/) 博客主题。
+> [LoveIt](https://github.com/dillonzq/LoveIt) 是一个**简洁**、**优雅**且**高效**的 [Hugo](https://gohugo.io/) 博客主题。
 
 它的原型基于 [LeaveIt 主题](https://github.com/liuzc/LeaveIt/) 和 [KeepIt 主题](https://github.com/liuzc/LeaveIt/)。
 
@@ -32,6 +32,7 @@
 * 易用和自动展开的**文章目录**
 * 支持更多的**社交链接**、**网站分享**和**评论系统**
 * 支持基于 [Lunr.js](https://lunrjs.com/) 或 [algolia](https://www.algolia.com/) 的**搜索**
+* 一键**复制代码**到剪贴板
 * 支持基于 **[Font Awesome](https://fontawesome.com/) 图标**的扩展 Markdown 语法
 * 支持**上标注释**的扩展 Markdown 语法
 * 支持**分数**的扩展 Markdown 语法
@@ -57,6 +58,7 @@
 * **性能**优化：在 [Google PageSpeed Insights](https://developers.google.com/speed/pagespeed/insights) 中， 99/100 的移动设备得分和 100/100 的桌面设备得分
 * 使用基于 JSON-LD 格式 的 **SEO SCHEMA** 文件进行 SEO 优化
 * 支持 **[Google Analytics](https://analytics.google.com/analytics)**
+* 支持 **[Fathom Analytics](https://usefathom.com/)**
 * 支持搜索引擎的**网站验证** (Google, Bind, Yandex and Baidu)
 * 支持所有第三方库的 **CDN**
 * 基于 [lazysizes](https://github.com/aFarkas/lazysizes) 自动转换图片为**懒加载**
@@ -75,7 +77,7 @@
 
 * 支持 **[Gravatar](https://gravatar.com)** 头像
 * 支持本地**头像**
-* 支持多达 **61** 种社交链接
+* 支持多达 **62** 种社交链接
 * 支持多达 **28** 种网站分享
 * 支持 **[Disqus](https://disqus.com)** 评论系统
 * 支持 **[Gitalk](https://github.com/gitalk/gitalk)** 评论系统
@@ -87,6 +89,7 @@
 
 * 支持基于 [Lunr.js](https://lunrjs.com/) 或 [algolia](https://www.algolia.com/) 的**搜索**
 * 支持**代码高亮**
+* 一键**复制代码**到剪贴板
 * 支持基于 [lightgallery.js](https://github.com/sachinchoolur/lightgallery.js) 的**图片画廊**
 * 支持 **[Font Awesome](https://fontawesome.com/) 图标**的扩展 Markdown 语法
 * 支持**上标注释**的扩展 Markdown 语法
@@ -112,16 +115,27 @@
     hugo server --source=exampleSite
     ```
 
+## 多语言和国际化
+
+LoveIt 支持下列语言:
+
+* 英语
+* 简体中文
+* 法语
+* 波兰语
+* [贡献一种新的语言](https://github.com/dillonzq/LoveIt/pulls)
+
 ## 问题、想法、 bugs 和 PRs
 
 所有的反馈都是欢迎的！详见 [issue tracker](https://github.com/dillonzq/LoveIt/issues)。
 
 ## 许可协议
 
-LoveIt 根据 MIT 许可协议授权。 更多信息请查看 [LICENSE 文件](https://github.com/dillonzq/LoveIt/blob/master/LICENSE)。
+LoveIt 根据 **MIT** 许可协议授权。 更多信息请查看 [LICENSE 文件](https://github.com/dillonzq/LoveIt/blob/master/LICENSE)。
 
 LoveIt 主题中用到了以下项目，感谢它们的作者：
 
+* [normalize.css](https://github.com/necolas/normalize.css)
 * [Font Awesome](https://fontawesome.com/)
 * [Fork Awesome](https://forkaweso.me/Fork-Awesome/)
 * [Animate.css](https://daneden.github.io/animate.css/)
@@ -129,9 +143,10 @@ LoveIt 主题中用到了以下项目，感谢它们的作者：
 * [autocomplete.js](https://github.com/algolia/autocomplete.js)
 * [Lunr.js](https://lunrjs.com/)
 * [algoliasearch](https://github.com/algolia/algoliasearch-client-javascript)
-* [Sharer.js](https://github.com/ellisonleao/sharer.js)
 * [lazysizes](https://github.com/aFarkas/lazysizes)
 * [lightgallery.js](https://github.com/sachinchoolur/lightgallery.js)
+* [clipboard.js](https://github.com/zenorocha/clipboard.js)
+* [Sharer.js](https://github.com/ellisonleao/sharer.js)
 * [TypeIt](https://typeitjs.com/)
 * [KaTeX](https://katex.org/)
 * [mermaid](https://github.com/knsv/mermaid)

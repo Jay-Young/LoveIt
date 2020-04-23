@@ -1,38 +1,21 @@
 ---
 weight: 1
 title: "主题文档 - 基本概念"
-subtitle: ""
 date: 2020-03-06T21:40:32+08:00
 lastmod: 2020-03-06T21:40:32+08:00
 draft: false
 author: "Dillon"
 authorLink: "https://dillonzq.com"
 description: "探索 Hugo - LoveIt 主题的全部内容和背后的核心概念."
-license: ""
 
-tags: ["安装", "配置"]
+tags: ["installation", "configuration"]
 categories: ["documentation"]
-hiddenFromHomePage: false
-
 featuredImage: "/images/theme-documentation-basics/featured-image.jpg"
-featuredImagePreview: ""
 
-toc: true
-autoCollapseToc: false
-math: false
-mapbox:
-    accessToken: ""
-    lightStyle: ""
-    darkStyle: ""
-    navigation: true
-    geolocate: true
-    scale: true
-    fullscreen: true
 lightgallery: true
-linkToMarkdown: true
-share:
-  enable: true
-comment: true
+
+toc:
+  auto: false
 ---
 
 探索 Hugo - **LoveIt** 主题的全部内容和背后的核心概念.
@@ -105,7 +88,7 @@ theme = "LoveIt"
 
 [params]
   # LoveIt 主题版本
-  version = "0.1.X"
+  version = "0.2.X"
 
 [menu]
   [[menu.main]]
@@ -142,13 +125,13 @@ theme = "LoveIt"
 以下是创建第一篇文章的方法:
 
 ```bash
-  hugo new posts/first_post.md
+hugo new posts/first_post.md
 ```
 
 通过添加一些示例内容并替换文件开头的标题, 你可以随意编辑文章.
 
 {{< admonition >}}
-默认情况下, 所有文章和页面均作为草稿创建. 如果想要渲染这些页面, 请从元数据中删除属性 `draft: true`, 或者设置属性 `draft: false`.
+默认情况下, 所有文章和页面均作为草稿创建. 如果想要渲染这些页面, 请从元数据中删除属性 `draft: true`, 设置属性 `draft: false` 或者为 `hugo` 命令添加 `-D`/`--buildDrafts` 参数.
 {{< /admonition >}}
 
 ### 2.5 在本地启动网站
@@ -165,6 +148,15 @@ hugo serve
 
 {{< admonition tip >}}
 当你运行 `hugo serve` 时, 当文件内容更改时, 页面会随着更改自动刷新.
+{{< /admonition >}}
+
+{{< admonition >}}
+由于本主题使用了 Hugo 中的 `.Scratch` 来实现一些特性,
+非常建议你为 `hugo server` 命令添加 `--disableFastRender` 参数来实时预览你正在编辑的文章页面.
+
+```bash
+hugo serve --disableFastRender
+```
 {{< /admonition >}}
 
 ### 2.6 构建网站
@@ -194,8 +186,8 @@ hugo
 
 ```toml
 [params]
-  # LoveIt 主题版本
-  version = "0.1.X"
+  # {{< version 0.2.0 changed >}} LoveIt 主题版本
+  version = "0.2.X"
   # 网站描述
   description = "这是我的全新 Hugo 网站"
   # 网站关键词
@@ -204,37 +196,74 @@ hugo
   defaultTheme = "auto"
   # 公共 git 仓库路径，仅在 enableGitInfo 设为 true 时有效
   gitRepo = ""
-  # {{< version 0.1.1 new small >}} 哪种哈希函数用来 SRI, 为空时表示不使用 SRI
+  # {{< version 0.1.1 >}} 哪种哈希函数用来 SRI, 为空时表示不使用 SRI
   # ("sha256", "sha384", "sha512", "md5")
   fingerprint = ""
-  # {{< version 0.2.0 new small >}} 搜索
+  # {{< version 0.2.0 >}} 日期格式
+  dateFormat = "2006-01-02"
+
+  # {{< version 0.2.0 >}} 搜索配置
   [params.search]
     enable = true
     # 搜索引擎的类型 ("lunr", "algolia")
     type = "lunr"
     # 文章内容索引长度
     contentLength = 5000
+    # 搜索框的占位提示语
+    placeholder = ""
     [params.search.algolia]
       index = ""
       appID = ""
       searchKey = ""
-  # 页面头部导航栏信息
+
+  # 页面头部导航栏配置
   [params.header]
     # 桌面端导航栏模式 ("fixed", "normal", "auto")
     desktopMode = "fixed"
     # 移动端导航栏模式 ("fixed", "normal", "auto")
     mobileMode = "auto"
-  # 页面底部版权信息设置
+
+  # 页面底部信息配置
   [params.footer]
+    enable = true
+    # {{< version 0.2.0 >}} 自定义内容 (支持 HTML 格式)
+    custom = ''
+    # {{< version 0.2.0 >}} 是否显示 Hugo 和主题信息
+    hugo = true
+    # {{< version 0.2.0 >}} 是否显示版权信息
+    copyright = true
+    # {{< version 0.2.0 >}} 是否显示作者
+    author = true
     # 网站创立年份
     since = 2019
     # ICP 备案信息，仅在中国使用 (支持 HTML 格式)
     icp = ""
     # 许可协议信息 (支持 HTML 格式)
     license = '<a rel="license external nofollow noopener noreffer" href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank">CC BY-NC 4.0</a>'
-  # 文章页面配置
+
+  # {{< version 0.2.0 >}} Section (所有文章) 页面配置
+  [params.section]
+    # section 页面每页显示文章数量
+    paginate = 20
+    # 日期格式 (月和日)
+    dateFormat = "01-02"
+    # RSS 文章数目
+    rss = 10
+
+  # {{< version 0.2.0 >}} List (目录或标签) 页面配置
+  [params.list]
+    # list 页面每页显示文章数量
+    paginate = 20
+    # 日期格式 (月和日)
+    dateFormat = "01-02"
+    # RSS 文章数目
+    rss = 10
+
+  # 主页配置
   [params.home]
-    # 主页信息设置
+    # {{< version 0.2.0 >}} RSS 文章数目
+    rss = 10
+    # 主页个人信息
     [params.home.profile]
       enable = true
       # Gravatar 邮箱，用于优先在主页显示的头像
@@ -247,16 +276,17 @@ hugo
       typeit = true
       # 是否显示社交账号
       social = true
-      # {{< version 0.2.0 new small >}} 免责声明 (支持 HTML 格式)
+      # {{< version 0.2.0 >}} 免责声明 (支持 HTML 格式)
       disclaimer = ""
     # 主页文章列表
     [params.home.posts]
       enable = true
       # 主页每页显示文章数量
       paginate = 6
-      # 当你没有在文章前置参数中设置 "hiddenFromHomePage" 时的默认行为
+      # {{< version 0.2.0 deleted >}} 当你没有在文章前置参数中设置 "hiddenFromHomePage" 时的默认行为
       defaultHiddenFromHomePage = false
-  # 主页的社交信息设置
+
+  # 作者的社交信息设置
   [params.social]
     GitHub = "xxxx"
     # Linkedin = "xxxx"
@@ -322,119 +352,158 @@ hugo
     # XMPP = "xxxx"
     # Matrix = "xxxx"
     Bilibili = "xxxx"
-  # 文章页面配置
+    RSS = true # {{< version 0.2.0 >}}
+
+  # {{< version 0.2.0 changed >}} 文章页面配置
   [params.page]
+    # {{< version 0.2.0 >}} 是否在主页隐藏一篇文章
+    hiddenFromHomePage = false
+    # {{< version 0.2.0 >}} 是否在搜索结果中隐藏一篇文章
+    hiddenFromSearch = false
     # 是否在文章页面使用 lightgallery
     lightgallery = true
+    # {{< version 0.2.0 >}} 是否显示代码块的复制按钮
+    copyCode = true
+    # {{< version 0.2.0 >}} 是否使用 ruby 扩展语法
+    ruby = true
+    # {{< version 0.2.0 >}} 是否使用 fraction 扩展语法
+    fraction = true
+    # {{< version 0.2.0 >}} 是否使用 fontawesome 扩展语法
+    fontawesome = true
     # 是否在文章页面显示原始 Markdown 文档链接
     linkToMarkdown = true
-  # {{< link "https://katex.org/" KaTeX >}} 数学公式
-  [params.math]
-    enable = true
-    # 默认块定界符是 $$ ... $$ 和 \\[ ... \\]
-    blockLeftDelimiter = ""
-    blockRightDelimiter = ""
-    # 默认内联定界符是 $ ... $ 和 \\( ... \\)
-    inlineLeftDelimiter = ""
-    inlineRightDelimiter = ""
-    # KaTeX 插件 copy_tex
-    copyTex = true
-    # KaTeX 插件 mhchem
-    mhchem = true
-  # {{< version 0.2.0 new small >}} {{< link "https://docs.mapbox.com/mapbox-gl-js" "Mapbox GL JS" >}} 配置
-  [params.mapbox]
-    # Mapbox GL JS 的 access token
-    accessToken = ""
-    # 浅色主题的地图样式
-    lightStyle = "mapbox://styles/mapbox/light-v9"
-    # 深色主题的地图样式
-    darkStyle = "mapbox://styles/mapbox/dark-v9"
-    # 是否添加 {{< link "https://docs.mapbox.com/mapbox-gl-js/api/#navigationcontrol" NavigationControl >}}
-    navigation = true
-    # 是否添加 {{< link "https://docs.mapbox.com/mapbox-gl-js/api/#geolocatecontrol" GeolocateControl >}}
-    geolocate = true
-    # 是否添加 {{< link "https://docs.mapbox.com/mapbox-gl-js/api/#scalecontrol" ScaleControl >}}
-    scale = true
-    # 是否添加 {{< link "https://docs.mapbox.com/mapbox-gl-js/api/#fullscreencontrol" FullscreenControl >}}
-    fullscreen = true
-  # 文章页面的分享信息设置
-  [params.share]
-    enable = true
-    Twitter = true
-    Facebook = true
-    # Linkedin = true
-    # Whatsapp = true
-    # Pinterest = true
-    # Tumblr = true
-    # HackerNews = true
-    # Reddit = true
-    # VK = true
-    # Buffer = true
-    # Xing = true
-    # Line = true
-    # Instapaper = true
-    # Pocket = true
-    # Digg = true
-    # Stumbleupon = true
-    # Flipboard = true
-    Weibo = true
-    # Renren = true
-    # Myspace = true
-    # Blogger = true
-    # Baidu = true
-    # Odnoklassniki = true
-    Evernote = true
-    # Skype = true
-    # Trello = true
-    # Mix = true
-  # 评论系统设置
-  [params.comment]
-    enable = true
-    # {{< link "https://disqus.com/" Disqus >}} 评论系统设置
-    [params.comment.disqus]
-      # {{< version 0.1.1 new small >}}
-      enable = false
-      # Disqus 的 shortname，用来在文章中启用 Disqus 评论系统
-      shortname = ""
-    # {{< link "https://github.com/gitalk/gitalk" Gitalk >}} 评论系统设置
-    [params.comment.gitalk]
-      # {{< version 0.1.1 new small >}}
-      enable = false
-      owner = ""
-      repo = ""
-      clientId = ""
-      clientSecret = ""
-    # {{< link "https://github.com/xCss/Valine" Valine >}} 评论系统设置
-    [params.comment.valine]
-      enable = false
-      appId = ""
-      appKey = ""
-      placeholder = "Your comment ..."
-      notify = false
-      verify = true
-      avatar = "mp"
-      meta= ""
-      pageSize = 10
-      lang = "en"
-      visitor = true
-      recordIP = true
-    # # {{< link "https://developers.facebook.com/docs/plugins/comments" "Facebook 评论系统" >}}设置
-    [params.comment.facebook]
-      enable = false
-      width = "100%"
-      numPosts = 10
-      appId = ""
-      languageCode = "zh_CN"
-    # {{< version 0.2.0 new small >}} {{< link "https://comments.app/" "Telegram Comments" >}} 评论系统设置
-    [params.comment.telegram]
-      enable = false
-      siteID = ""
-      limit = 5
-      height = ""
-      color = ""
-      colorful = true
-      dislikes = false
-      outlined = false
+    # {{< version 0.2.0 >}} 目录配置
+    [params.page.toc]
+      # 是否使用目录
+      enable = true
+      # 是否使目录自动折叠展开
+      auto = true
+    # {{< version 0.2.0 changed >}} {{< link "https://katex.org/" KaTeX >}} 数学公式
+    [params.page.math]
+      enable = true
+      # 默认块定界符是 $$ ... $$ 和 \\[ ... \\]
+      blockLeftDelimiter = ""
+      blockRightDelimiter = ""
+      # 默认内联定界符是 $ ... $ 和 \\( ... \\)
+      inlineLeftDelimiter = ""
+      inlineRightDelimiter = ""
+      # KaTeX 插件 copy_tex
+      copyTex = true
+      # KaTeX 插件 mhchem
+      mhchem = true
+    # {{< version 0.2.0 >}} {{< link "https://docs.mapbox.com/mapbox-gl-js" "Mapbox GL JS" >}} 配置
+    [params.page.mapbox]
+      # Mapbox GL JS 的 access token
+      accessToken = ""
+      # 浅色主题的地图样式
+      lightStyle = "mapbox://styles/mapbox/light-v9"
+      # 深色主题的地图样式
+      darkStyle = "mapbox://styles/mapbox/dark-v9"
+      # 是否添加 {{< link "https://docs.mapbox.com/mapbox-gl-js/api/#navigationcontrol" NavigationControl >}}
+      navigation = true
+      # 是否添加 {{< link "https://docs.mapbox.com/mapbox-gl-js/api/#geolocatecontrol" GeolocateControl >}}
+      geolocate = true
+      # 是否添加 {{< link "https://docs.mapbox.com/mapbox-gl-js/api/#scalecontrol" ScaleControl >}}
+      scale = true
+      # 是否添加 {{< link "https://docs.mapbox.com/mapbox-gl-js/api/#fullscreencontrol" FullscreenControl >}}
+      fullscreen = true
+    # {{< version 0.2.0 changed >}} 文章页面的分享信息设置
+    [params.page.share]
+      enable = true
+      Twitter = true
+      Facebook = true
+      # Linkedin = true
+      # Whatsapp = true
+      # Pinterest = true
+      # Tumblr = true
+      # HackerNews = true
+      # Reddit = true
+      # VK = true
+      # Buffer = true
+      # Xing = true
+      # Line = true
+      # Instapaper = true
+      # Pocket = true
+      # Digg = true
+      # Stumbleupon = true
+      # Flipboard = true
+      Weibo = true
+      # Renren = true
+      # Myspace = true
+      # Blogger = true
+      # Baidu = true
+      # Odnoklassniki = true
+      Evernote = true
+      # Skype = true
+      # Trello = true
+      # Mix = true
+    # {{< version 0.2.0 changed >}} 评论系统设置
+    [params.page.comment]
+      enable = true
+      # {{< link "https://disqus.com/" Disqus >}} 评论系统设置
+      [params.page.comment.disqus]
+        # {{< version 0.1.1 >}}
+        enable = false
+        # Disqus 的 shortname，用来在文章中启用 Disqus 评论系统
+        shortname = ""
+      # {{< link "https://github.com/gitalk/gitalk" Gitalk >}} 评论系统设置
+      [params.page.comment.gitalk]
+        # {{< version 0.1.1 >}}
+        enable = false
+        owner = ""
+        repo = ""
+        clientId = ""
+        clientSecret = ""
+      # {{< link "https://github.com/xCss/Valine" Valine >}} 评论系统设置
+      [params.page.comment.valine]
+        enable = false
+        appId = ""
+        appKey = ""
+        placeholder = "Your comment ..."
+        notify = false
+        verify = true
+        avatar = "mp"
+        meta= ""
+        pageSize = 10
+        lang = "en"
+        visitor = true
+        recordIP = true
+      # {{< link "https://developers.facebook.com/docs/plugins/comments" "Facebook 评论系统" >}}设置
+      [params.page.comment.facebook]
+        enable = false
+        width = "100%"
+        numPosts = 10
+        appId = ""
+        languageCode = "zh_CN"
+      # {{< version 0.2.0 >}} {{< link "https://comments.app/" "Telegram Comments" >}} 评论系统设置
+      [params.page.comment.telegram]
+        enable = false
+        siteID = ""
+        limit = 5
+        height = ""
+        color = ""
+        colorful = true
+        dislikes = false
+        outlined = false
+    # {{< version 0.2.0 >}} SEO config
+    [params.page.seo]
+      # 出版者信息
+      [params.page.seo.publisher]
+        name = "xxxx"
+        [params.page.seo.publisher.logo]
+          url = "logo.png"
+          width = 127
+          height = 40
+      # Logo 信息
+      [params.page.seo.logo]
+        url = "logo.png"
+        width = 127
+        height = 40
+      # 图片信息
+      [params.page.seo.image]
+        url = "cover.png"
+        width = 800
+        height = 600
 
   # 网站验证代码，用于 Google/Bing/Yandex/Pinterest/Baidu
   [params.verification]
@@ -443,46 +512,50 @@ hugo
     yandex = ""
     pinterest = ""
     baidu = ""
-  # 出版者信息，仅用于 SEO
-  [params.publisher]
-    name = "xxxx"
-    [params.publisher.logo]
-      url = "logo.png"
-      width = 127
-      height = 40
-  # 网站 Logo 信息，仅用于 SEO
-  [params.logo]
-    url = "logo.png"
-    width = 127
-    height = 40
-  # 网站图标信息，仅用于 SEO
-  [params.image]
-    url = "cover.png"
-    width = 800
-    height = 600
+
+  # {{< version 0.2.0 >}} 网站分析配置
+  [params.analytics]
+    enable = false
+    # Google Analytics
+    [params.analytics.google]
+      id = ""
+      # 是否匿名化用户 IP
+      anonymizeIP = true
+      # 是否使用 cookie
+      cookie = false
+    # Fathom Analytics
+    [params.analytics.fathom]
+      id = ""
+      # 自行托管追踪器时的主机路径
+      server = ""
+
   # CSS 和 JS 文件的 CDN 设置
   [params.cdn]
+    # {{< version 0.2.0 >}} {{< link "https://github.com/necolas/normalize.css" "normalize.css" >}}@8.0.1
+    normalizeCSS = ''
     # {{< link "https://fontawesome.com/" "fontawesome-free" >}}@5.12.1
     fontawesomeFreeCSS = ''
     # animate.css@3.7.2 https://github.com/daneden/animate.css
     animateCSS = ''
     # {{< link "https://github.com/cferdinandi/smooth-scroll" "smooth-scroll" >}}@16.1.2
     smoothScrollJS = ''
-    # {{< version 0.2.0 new small >}} {{< link "https://github.com/algolia/autocomplete.js" "autocomplete.js" >}}@0.37.1
+    # {{< version 0.2.0 >}} {{< link "https://github.com/algolia/autocomplete.js" "autocomplete.js" >}}@0.37.1
     autocompleteJS = ''
-    # {{< version 0.2.0 new small >}} {{< link "https://lunrjs.com/" "lunr.js" >}}@2.3.8
+    # {{< version 0.2.0 >}} {{< link "https://lunrjs.com/" "lunr.js" >}}@2.3.8
     lunrJS = ''
-    # {{< version 0.2.0 new small >}} {{< link "https://github.com/algolia/algoliasearch-client-javascript" "algoliasearch" >}}@4.1.0
+    # {{< version 0.2.0 >}} {{< link "https://github.com/algolia/algoliasearch-client-javascript" "algoliasearch" >}}@4.1.0
     algoliasearchJS = ''
-    # {{< link "https://github.com/ellisonleao/sharer.js" "sharer" >}}@0.4.0
-    sharerJS = ''
     # {{< link "https://github.com/aFarkas/lazysizes" "lazysizes" >}}@5.2.0
     lazysizesJS = ''
-    # {{< link "https://github.com/sachinchoolur/lightgallery.js" "lightgallery" >}}@1.1.3 lg-thumbnail@1.1.0 lg-zoom@1.1.0
+    # {{< link "https://github.com/sachinchoolur/lightgallery.js" "lightgallery.js" >}}@1.1.3 lg-thumbnail@1.1.0 lg-zoom@1.1.0
     lightgalleryCSS = ''
     lightgalleryJS = ''
     lightgalleryThumbnailJS = ''
     lightgalleryZoomJS = ''
+    # {{< version 0.2.0 >}} {{< link "https://github.com/zenorocha/clipboard.js" "clipboard.js" >}}@2.0.6
+    clipboardJS = ''
+    # {{< link "https://github.com/ellisonleao/sharer.js" "sharer" >}}@0.4.0
+    sharerJS = ''
     # {{< link "https://github.com/alexmacarthur/typeit" "typeit" >}}@6.5.1
     typeitJS = ''
     # {{< link "https://github.com/KaTeX/KaTeX" "katex" >}}@0.11.1
@@ -497,7 +570,7 @@ hugo
     # {{< link "https://echarts.apache.org/" "echarts" >}}@4.6.0
     echartsJS = ''
     echartsMacaronsJS = ''
-    # {{< version 0.2.0 new small >}} {{< link "https://docs.mapbox.com/mapbox-gl-js" mapbox-gl >}}@1.8.1
+    # {{< version 0.2.0 >}} {{< link "https://docs.mapbox.com/mapbox-gl-js" mapbox-gl >}}@1.8.1
     mapboxGLCSS = ''
     mapboxGLJS = ''
     # {{< link "https://github.com/MoePlayer/APlayer" "aplayer" >}}@1.10.1
@@ -518,7 +591,7 @@ hugo
     codeFences = true
     guessSyntax = true
     lineNos = true
-    lineNumbersInTable = false
+    lineNumbersInTable = true
     # false 是必要的设置
     # ({{< link "https://github.com/dillonzq/LoveIt/issues/158" >}})
     noClasses = false
@@ -540,27 +613,30 @@ hugo
     startLevel = 2
     endLevel = 6
 
-# 作者信息
+# 作者配置
 [author]
   name = "xxxx"
+  email = ""
   link = ""
 
-# 网站地图信息
+# 网站地图配置
 [sitemap]
   changefreq = "weekly"
   filename = "sitemap.xml"
   priority = 0.5
 
-# {{< link "https://gohugo.io/content-management/urls/#permalinks" "Permalinks 信息" >}}
+# {{< link "https://gohugo.io/content-management/urls/#permalinks" "Permalinks 配置" >}}
 [Permalinks]
   # posts = ":year/:month/:filename"
   posts = ":filename"
 
-# {{< link "https://gohugo.io/about/hugo-and-gdpr/" "隐私信息设置" >}}
+# {{< link "https://gohugo.io/about/hugo-and-gdpr/" "隐私信息配置" >}}
 [privacy]
+  # {{< version 0.2.0 deleted >}} Google Analytics 相关隐私 (被 params.analytics.google 替代)
   [privacy.googleAnalytics]
-    anonymizeIP = true
-
+    # ...
+  [privacy.twitter]
+    enableDNT = true
   [privacy.youtube]
     privacyEnhanced = true
 
@@ -577,7 +653,7 @@ hugo
 
 # 用于 Hugo 输出文档的设置
 [outputs]
-  # {{< version 0.2.0 changed small >}}
+  # {{< version 0.2.0 changed >}}
   home = ["HTML", "RSS", "JSON"]
   page = ["HTML", "MarkDown"]
   section = ["HTML", "RSS"]
@@ -635,23 +711,29 @@ $code-font-family: Fira Mono, Source Code Pro, Menlo, Consolas, Monaco, monospac
 
 ## 4 多语言和 i18n
 
-**LoveIt** 主题完全兼容 Hugo 的多语言模式.
-
-支持:
-
-* 多种语言的翻译字符串 (**英语**, **中文**和**法语**). **欢迎贡献!**
-* 在浏览器内语言切换
+**LoveIt** 主题完全兼容 Hugo 的多语言模式, 并且支持在网页上切换语言.
 
 ![语言切换](/images/theme-documentation-basics/language-switch.gif "语言切换")
 
-### 4.1 基本配置
+### 4.1 兼容性 {#language-compatibility}
+
+| 语言 | Hugo 代码 | HTML `lang` 属性 | 主题文档 | Lunr.js 支持 |
+|:---- |:----:|:----:|:----:|:----:|
+| 英语 | `en` | `en` | :(far fa-check-square): | :(far fa-check-square): |
+| 简体中文 | `zh-cn` | `zh-CN` | :(far fa-check-square): | :(far fa-check-square): |
+| 法语 | `fr` | `fr` | :(far fa-square): | :(far fa-check-square): |
+| 波兰语 | `pl` | `pl` | :(far fa-square): | :(far fa-square): |
+
+:(far fa-kiss-wink-heart): **请自由地[贡献代码](https://github.com/dillonzq/LoveIt/pulls)!**
+
+### 4.2 基本配置
 
 学习了 [Hugo如何处理多语言网站](https://gohugo.io/content-management/multilingual) 之后, 请在 [站点配置](#site-configuration) 中定义你的网站语言.
 
 例如, 一个支持英语, 中文和法语的网站配置:
 
 ```toml
-# [en, zh-cn, fr, ...] 设置默认的语言
+# [en, zh-cn, fr, pl, ...] 设置默认的语言
 defaultContentLanguage = "zh-cn"
 
 [languages]
@@ -756,12 +838,12 @@ defaultContentLanguage = "zh-cn"
 也可以使用 [文章前置参数](https://gohugo.io/content-management/multilingual/#translate-your-content) 来翻译网址.
 {{< /admonition >}}
 
-### 4.2 修改默认的翻译字符串
+### 4.3 修改默认的翻译字符串
 
 翻译字符串用于在主题中使用的常见默认值.
-目前提供**英语**, **中文**和**法语**翻译, 但你可能自定义其他语言或覆盖默认值.
+目前提供[一些语言](#language-compatibility)的翻译, 但你可能自定义其他语言或覆盖默认值.
 
-要覆盖默认值, 请在项目的 i18n 目录 `i18n/<languageCode>.toml` 中创建一个新文件，并从 `themes/LoveIt/i18n/en.toml` 中获得提示.
+要覆盖默认值, 请在你项目的 i18n 目录 `i18n/<languageCode>.toml` 中创建一个新文件，并从 `themes/LoveIt/i18n/en.toml` 中获得提示.
 
 另外, 由于你的翻译可能会帮助到其他人, 请花点时间通过 [创建一个 PR](https://github.com/dillonzq/LoveIt/pulls) 来贡献主题翻译, 谢谢!
 

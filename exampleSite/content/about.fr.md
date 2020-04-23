@@ -3,8 +3,10 @@ title: "À propos de LoveIt"
 date: 2019-08-02T11:04:49+08:00
 draft: false
 
-math: true
 lightgallery: true
+
+math:
+  enable: true
 ---
 
 [![GitHub release (latest by date)](https://img.shields.io/github/v/release/dillonzq/LoveIt?style=flat-square)](https://github.com/dillonzq/LoveIt/releases)
@@ -30,7 +32,8 @@ It is based on the original [LeaveIt Theme](https://github.com/liuzc/LeaveIt/) a
 
 * :(fas fa-rocket): Optimized for **performance**: [99]/[100] on mobile and [100]/[100] on desktop in [Google PageSpeed Insights](https://developers.google.com/speed/pagespeed/insights)
 * :(fab fa-searchengin): Optimized SEO performance with a correct **SEO SCHEMA** based on JSON-LD
-* :(fab fa-google): [**Google Analytics**](https://analytics.google.com/analytics) supported
+* :(fab fa-google): **[Google Analytics](https://analytics.google.com/analytics)** supported
+* :(far fa-chart-bar): **[Fathom Analytics](https://usefathom.com/)** supported
 * :(fas fa-search): Search engine **verification** supported (Google, Bind, Yandex and Baidu)
 * :(fas fa-tachometer-alt): **CDN** for third-party libraries supported
 * :(fas fa-cloud-download-alt): Automatically converted images with **Lazy Load** by [lazysizes](https://github.com/aFarkas/lazysizes)
@@ -49,7 +52,7 @@ It is based on the original [LeaveIt Theme](https://github.com/liuzc/LeaveIt/) a
 
 * :(far fa-user): **Gravatar** supported by [Gravatar](https://gravatar.com)
 * :(fas fa-user-circle): Local **Avatar** supported
-* :(far fa-id-card): Up to **61** social links supported
+* :(far fa-id-card): Up to **62** social links supported
 * :(fas fa-share-square): Up to **28** share sites supported
 * :(far fa-comment): **Disqus** comment system supported by [Disqus](https://disqus.com)
 * :(far fa-comment-dots): **Gitalk** comment system supported by [Gitalk](https://github.com/gitalk/gitalk)
@@ -61,6 +64,7 @@ It is based on the original [LeaveIt Theme](https://github.com/liuzc/LeaveIt/) a
 
 * :(fas fa-search): **Search** supported by [Lunr.js](https://lunrjs.com/) or [algolia](https://www.algolia.com/)
 * :(fas fa-code): Automatically **highlighting** code
+* :(far fa-copy): **Copy code** to clipboard with one click
 * :(far fa-images): **Images gallery** supported by [lightgallery.js](https://github.com/sachinchoolur/lightgallery.js)
 * :(fab fa-font-awesome): Extended Markdown syntax for **[Font Awesome](https://fontawesome.com/) icons**
 * :(far fa-sticky-note): Extended Markdown syntax for **ruby annotation**
@@ -79,12 +83,13 @@ It is based on the original [LeaveIt Theme](https://github.com/liuzc/LeaveIt/) a
 
 ### License
 
-LoveIt is licensed under the MIT license.
+LoveIt is licensed under the **MIT** license.
 
 Check the [LICENSE file](https://github.com/dillonzq/LoveIt/blob/master/LICENSE) for details.
 
 Thanks to the authors of following resources included in the theme:
 
+* [normalize.css](https://github.com/necolas/normalize.css)
 * [Font Awesome](https://fontawesome.com/)
 * [Fork Awesome](https://forkaweso.me/Fork-Awesome/)
 * [Animate.css](https://daneden.github.io/animate.css/)
@@ -92,9 +97,10 @@ Thanks to the authors of following resources included in the theme:
 * [autocomplete.js](https://github.com/algolia/autocomplete.js)
 * [Lunr.js](https://lunrjs.com/)
 * [algoliasearch](https://github.com/algolia/algoliasearch-client-javascript)
-* [Sharer.js](https://github.com/ellisonleao/sharer.js)
 * [lazysizes](https://github.com/aFarkas/lazysizes)
 * [lightgallery.js](https://github.com/sachinchoolur/lightgallery.js)
+* [clipboard.js](https://github.com/zenorocha/clipboard.js)
+* [Sharer.js](https://github.com/ellisonleao/sharer.js)
 * [TypeIt](https://typeitjs.com/)
 * [$ \KaTeX $](https://katex.org/)
 * [mermaid](https://github.com/knsv/mermaid)
