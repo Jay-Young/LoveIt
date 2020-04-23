@@ -275,6 +275,9 @@
     {{- end -}}
 {{- end -}}
 
+{{- /* Custom script */ -}}
+{{- dict "source" "js/custom.js" "fingerprint" $fingerprint | slice | $scratch.Add "script" -}}
+
 {{- /* Dev feature */ -}}
 {{- if .Params.dev -}}
 {{- end -}}
