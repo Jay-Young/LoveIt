@@ -3,8 +3,10 @@ title: "关于 LoveIt"
 date: 2019-08-02T11:04:49+08:00
 draft: false
 
-math: true
 lightgallery: true
+
+math:
+  enable: true
 ---
 
 [![GitHub release (latest by date)](https://img.shields.io/github/v/release/dillonzq/LoveIt?style=flat-square)](https://github.com/dillonzq/LoveIt/releases)
@@ -26,6 +28,7 @@ lightgallery: true
 * :(fas fa-rocket): **性能**优化：在 [Google PageSpeed Insights](https://developers.google.com/speed/pagespeed/insights) 中， [99]/[100] 的移动设备得分和 [100]/[100] 的桌面设备得分
 * :(fab fa-searchengin): 使用基于 JSON-LD 格式 的 **SEO SCHEMA** 文件进行 SEO 优化
 * :(fab fa-google): 支持 **[Google Analytics](https://analytics.google.com/analytics)**
+* :(far fa-chart-bar): 支持 **[Fathom Analytics](https://usefathom.com/)**
 * :(fas fa-search): 支持搜索引擎的**网站验证** (Google, Bind, Yandex and Baidu)
 * :(fas fa-tachometer-alt): 支持所有第三方库的 **CDN**
 * :(fas fa-cloud-download-alt): 基于 [lazysizes](https://github.com/aFarkas/lazysizes) 自动转换图片为**懒加载**
@@ -44,7 +47,7 @@ lightgallery: true
 
 * :(far fa-user): 支持 **[Gravatar](https://gravatar.com)** 头像
 * :(fas fa-user-circle): 支持本地**头像**
-* :(far fa-id-card): 支持多达 **61** 种社交链接
+* :(far fa-id-card): 支持多达 **62** 种社交链接
 * :(fas fa-share-square): 支持多达 **28** 种网站分享
 * :(far fa-comment): 支持 **[Disqus](https://disqus.com)** 评论系统
 * :(far fa-comment-dots): 支持 **[Gitalk](https://github.com/gitalk/gitalk)** 评论系统
@@ -56,6 +59,7 @@ lightgallery: true
 
 * :(fas fa-search): 支持基于 [Lunr.js](https://lunrjs.com/) 或 [algolia](https://www.algolia.com/) 的**搜索**
 * :(fas fa-code): 支持**代码高亮**
+* :(far fa-copy): 一键**复制代码**到剪贴板
 * :(far fa-images): 支持基于 [lightgallery.js](https://github.com/sachinchoolur/lightgallery.js) 的**图片画廊**
 * :(fab fa-font-awesome): 支持 **[Font Awesome](https://fontawesome.com/) 图标**的扩展 Markdown 语法
 * :(far fa-sticky-note): 支持**上标注释**的扩展 Markdown 语法
@@ -74,12 +78,13 @@ lightgallery: true
 
 ### 许可协议
 
-LoveIt 根据 MIT 许可协议授权。
+LoveIt 根据 **MIT** 许可协议授权。
 
 更多信息请查看 [LICENSE 文件](https://github.com/dillonzq/LoveIt/blob/master/LICENSE)。
 
 LoveIt 主题中用到了以下项目，感谢它们的作者：
 
+* [normalize.css](https://github.com/necolas/normalize.css)
 * [Font Awesome](https://fontawesome.com/)
 * [Fork Awesome](https://forkaweso.me/Fork-Awesome/)
 * [Animate.css](https://daneden.github.io/animate.css/)
@@ -87,9 +92,10 @@ LoveIt 主题中用到了以下项目，感谢它们的作者：
 * [autocomplete.js](https://github.com/algolia/autocomplete.js)
 * [Lunr.js](https://lunrjs.com/)
 * [algoliasearch](https://github.com/algolia/algoliasearch-client-javascript)
-* [Sharer.js](https://github.com/ellisonleao/sharer.js)
 * [lazysizes](https://github.com/aFarkas/lazysizes)
 * [lightgallery.js](https://github.com/sachinchoolur/lightgallery.js)
+* [clipboard.js](https://github.com/zenorocha/clipboard.js)
+* [Sharer.js](https://github.com/ellisonleao/sharer.js)
 * [TypeIt](https://typeitjs.com/)
 * [$ \KaTeX $](https://katex.org/)
 * [mermaid](https://github.com/knsv/mermaid)

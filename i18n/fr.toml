@@ -40,6 +40,30 @@ other = "Plus"
 [selectLanguage]
 other = "Choisir la langue"
 
+[switchTheme]
+other = "Changer de Thème"
+# === partials/header.html ===
+
+# === partials/footer.html ===
+[poweredBySome]
+other = "Propulsé par %s"
+
+[theme]
+other = "Thème"
+# === partials/footer.html ===
+
+# === partials/comment.html ===
+[valineLang]
+other = "en"
+
+[valinePlaceholder]
+other = "Votre commentaire ..."
+
+[facebookLanguageCode]
+other = "fr"
+# === partials/comment.html ===
+
+# === partials/assets.html ===
 [search]
 other = "Chercher"
 
@@ -55,24 +79,14 @@ other = "Annuler"
 [noResultsFound]
 other = "Aucun résultat trouvé"
 
-[switchTheme]
-other = "Changer de Thème"
-# === partials/header.html ===
-
-# === partials/footer.html ===
-[poweredBySome]
-other = "Propulsé par %s"
-
-[theme]
-other = "Thème"
-# === partials/footer.html ===
-
-# === partials/assets.html ===
 [lunrLanguageLib]
 other = "lib/lunr/lunr.fr.js"
 
 [lunrLanguageCode]
 other = "fr"
+
+[copyToClipboard]
+other = "Copier dans le presse-papiers"
 # === partials/assets.html ===
 
 # === partials/plugin/share.html ===

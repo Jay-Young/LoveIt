@@ -5,9 +5,9 @@
 [![License](https://img.shields.io/github/license/dillonzq/LoveIt?style=flat-square)](https://github.com/dillonzq/LoveIt/blob/master/LICENSE)
 [![CircleCI](https://img.shields.io/circleci/build/github/dillonzq/LoveIt/develop?label=CI&style=flat-square&logo=circleci)](https://app.circleci.com/pipelines/github/dillonzq/LoveIt)
 
-English README | [中文说明](https://github.com/dillonzq/LoveIt/blob/master/README.zh-cn.md)
+English README | [简体中文说明](https://github.com/dillonzq/LoveIt/blob/master/README.zh-cn.md)
 
-**LoveIt** is a **clean**, **elegant** but **advanced** blog theme for [Hugo](https://gohugo.io/).
+> **LoveIt** is a **clean**, **elegant** but **advanced** blog theme for [Hugo](https://gohugo.io/).
 
 It is based on the original [LeaveIt Theme](https://github.com/liuzc/LeaveIt/) and [KeepIt Theme](https://github.com/liuzc/LeaveIt/).
 
@@ -33,6 +33,7 @@ Compared to the original LeaveIt theme and the KeepIt theme, the LoveIt theme ha
 * Easy-to-use and self-expanding **table of contents**
 * More **social links**, **share sites** and **comment system**
 * **Search** supported by [Lunr.js](https://lunrjs.com/) or [algolia](https://www.algolia.com/)
+* **Copy code** to clipboard with one click
 * Extended Markdown syntax for **[Font Awesome](https://fontawesome.com/) icons**
 * Extended Markdown syntax for **ruby annotation**
 * Extended Markdown syntax for **fraction**
@@ -61,7 +62,8 @@ I hope you will LoveIt ❤️!
 
 * Optimized for **performance**: 99/100 on mobile and 100/100 on desktop in [Google PageSpeed Insights](https://developers.google.com/speed/pagespeed/insights)
 * Optimized SEO performance with a correct **SEO SCHEMA** based on JSON-LD
-* [**Google Analytics**](https://analytics.google.com/analytics) supported
+* **[Google Analytics](https://analytics.google.com/analytics)** supported
+* **[Fathom Analytics](https://usefathom.com/)** supported
 * Search engine **verification** supported (Google, Bind, Yandex and Baidu)
 * **CDN** for third-party libraries supported
 * Automatically converted images with **Lazy Load** by [lazysizes](https://github.com/aFarkas/lazysizes)
@@ -80,7 +82,7 @@ I hope you will LoveIt ❤️!
 
 * **Gravatar** supported by [Gravatar](https://gravatar.com)
 * Local **Avatar** supported
-* Up to **61** social links supported
+* Up to **62** social links supported
 * Up to **28** share sites supported
 * **Disqus** comment system supported by [Disqus](https://disqus.com)
 * **Gitalk** comment system supported by [Gitalk](https://github.com/gitalk/gitalk)
@@ -92,6 +94,7 @@ I hope you will LoveIt ❤️!
 
 * **Search** supported by [Lunr.js](https://lunrjs.com/) or [algolia](https://www.algolia.com/)
 * Automatically **highlighting** code
+* **Copy code** to clipboard with one click
 * **Images gallery** supported by [lightgallery.js](https://github.com/sachinchoolur/lightgallery.js)
 * Extended Markdown syntax for **[Font Awesome](https://fontawesome.com/) icons**
 * Extended Markdown syntax for **ruby annotation**
@@ -117,16 +120,27 @@ I hope you will LoveIt ❤️!
     hugo server --source=exampleSite
     ```
 
+## Multilingual and i18n
+
+LoveIt supports the following languages:
+
+* English
+* Simplified Chinese
+* French
+* Polish
+* [Contribute with a new language](https://github.com/dillonzq/LoveIt/pulls)
+
 ## Questions, ideas, bugs, pull requests
 
 All feedback is welcome! Head over to the [issue tracker](https://github.com/dillonzq/LoveIt/issues).
 
 ## License
 
-LoveIt is licensed under the MIT license. Check the [LICENSE file](https://github.com/dillonzq/LoveIt/blob/master/LICENSE) for details.
+LoveIt is licensed under the **MIT** license. Check the [LICENSE file](https://github.com/dillonzq/LoveIt/blob/master/LICENSE) for details.
 
 Thanks to the authors of following resources included in the theme:
 
+* [normalize.css](https://github.com/necolas/normalize.css)
 * [Font Awesome](https://fontawesome.com/)
 * [Fork Awesome](https://forkaweso.me/Fork-Awesome/)
 * [Animate.css](https://daneden.github.io/animate.css/)
@@ -134,9 +148,10 @@ Thanks to the authors of following resources included in the theme:
 * [autocomplete.js](https://github.com/algolia/autocomplete.js)
 * [Lunr.js](https://lunrjs.com/)
 * [algoliasearch](https://github.com/algolia/algoliasearch-client-javascript)
-* [Sharer.js](https://github.com/ellisonleao/sharer.js)
 * [lazysizes](https://github.com/aFarkas/lazysizes)
 * [lightgallery.js](https://github.com/sachinchoolur/lightgallery.js)
+* [clipboard.js](https://github.com/zenorocha/clipboard.js)
+* [Sharer.js](https://github.com/ellisonleao/sharer.js)
 * [TypeIt](https://typeitjs.com/)
 * [KaTeX](https://katex.org/)
 * [mermaid](https://github.com/knsv/mermaid)
