@@ -207,7 +207,7 @@
     {{- /* 030: 豆瓣 */ -}}
     {{- if .Params.Share.Douban | default .Site.Params.Share.Douban | eq true -}}
         <a href="javascript:void(0);" title="{{ T `shareOn` }} 豆瓣" data-sharer="douban" data-url="{{ .Permalink }}" data-title="{{ .Title }}"{{ with .Params.featuredImage }} data-image="{{ . }}"{{ end }}>
-            {{- partial "plugin/icon.html" (dict "class" "loveit it-douban-fill" "type" "other" "scratch" $scratch) -}}
+            {{- partial "plugin/icon.html" (dict "class" "loveit it-douban-fill" "type" "other" "scratch" .scratch) -}}
         </a>
     {{- end -}}
 

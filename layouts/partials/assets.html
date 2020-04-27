@@ -244,42 +244,42 @@
 
 {{- /* live2d-widget */ -}}
 {{- if ne .Site.Params.live2dwidget false -}}
-    {{- with $CDN.live2dwidgetJS -}}
-        {{- dict "source" . "crossorigin" true | slice | $scratch.Add "script" -}}
+    {{- with $cdn.live2dwidgetJS -}}
+        {{- dict "source" . | dict "scratch" $.Scratch "data" | partial "scratch/script.html" -}}
     {{- else -}}
-        {{- dict "source" "lib/live2d-widget/autoload.js" "fingerprint" $fingerprint | slice | $scratch.Add "script" -}}
+        {{- dict "source" "lib/live2d-widget/autoload.js" "fingerprint" $fingerprint | dict "scratch" $.Scratch "data" | partial "scratch/script.html" -}}
     {{- end -}}
 {{- end -}}
 
 {{- /* Video */ -}}
 {{- if ne .Site.Params.DPlayer false -}}
-    {{- if $scratch.Get "video" -}}
+    {{- if (.Scratch.Get "this").video -}}
         {{- /* DPlayer */ -}}
-        {{- with $CDN.dplayerCSS -}}
-            {{- dict "source" . "crossorigin" true | slice | $scratch.Add "stylesheet" -}}
+        {{- with $cdn.dplayerCSS -}}
+            {{- dict "source" . | dict "scratch" $.Scratch "data" | partial "scratch/stylesheet.html" -}}
         {{- else -}}
-            {{- dict "source" "lib/dplayer/DPlayer.min.css" "fingerprint" $fingerprint | slice | $scratch.Add "stylesheet" -}}
+            {{- dict "source" "lib/dplayer/DPlayer.min.css" "fingerprint" $fingerprint | dict "scratch" $.Scratch "data" | partial "scratch/stylesheet.html" -}}
         {{- end -}}
-        {{- with $CDN.hlsJS -}}
-            {{- dict "source" . "crossorigin" true | slice | $scratch.Add "script" -}}
+        {{- with $cdn.hlsJS -}}
+            {{- dict "source" . | dict "scratch" $.Scratch "data" | partial "scratch/script.html" -}}
         {{- else -}}
-            {{- dict "source" "lib/dplayer/hls.min.js" "fingerprint" $fingerprint | slice | $scratch.Add "script" -}}
+            {{- dict "source" "lib/dplayer/hls.min.js" "fingerprint" $fingerprint | dict "scratch" $.Scratch "data" | partial "scratch/script.html" -}}
         {{- end -}}
-        {{- with $CDN.flvJS -}}
-            {{- dict "source" . "crossorigin" true | slice | $scratch.Add "script" -}}
+        {{- with $cdn.flvJS -}}
+            {{- dict "source" . | dict "scratch" $.Scratch "data" | partial "scratch/script.html" -}}
         {{- else -}}
-            {{- dict "source" "lib/dplayer/flv.min.js" "fingerprint" $fingerprint | slice | $scratch.Add "script" -}}
+            {{- dict "source" "lib/dplayer/flv.min.js" "fingerprint" $fingerprint | dict "scratch" $.Scratch "data" | partial "scratch/script.html" -}}
         {{- end -}}
-        {{- with $CDN.dplayerJS -}}
-            {{- dict "source" . "crossorigin" true | slice | $scratch.Add "script" -}}
+        {{- with $cdn.dplayerJS -}}
+            {{- dict "source" . | dict "scratch" $.Scratch "data" | partial "scratch/script.html" -}}
         {{- else -}}
-            {{- dict "source" "lib/dplayer/DPlayer.min.js" "fingerprint" $fingerprint | slice | $scratch.Add "script" -}}
+            {{- dict "source" "lib/dplayer/DPlayer.min.js" "fingerprint" $fingerprint | dict "scratch" $.Scratch "data" | partial "scratch/script.html" -}}
         {{- end -}}
     {{- end -}}
 {{- end -}}
 
 {{- /* Custom script */ -}}
-{{- dict "source" "js/custom.js" "fingerprint" $fingerprint | slice | $scratch.Add "script" -}}
+{{- dict "source" "js/custom.js" "fingerprint" $fingerprint | dict "scratch" $.Scratch "data" | partial "scratch/script.html" -}}
 
 {{- /* Dev feature */ -}}
 {{- if .Params.dev -}}
