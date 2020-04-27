@@ -36,7 +36,7 @@
                         {{- T "included" -}}
                         {{- range $index, $value := . -}}
                             {{- if gt $index 0 }}&nbsp;{{ end -}}
-                            {{- $category := printf "/categories/%s" $value | $.Site.GetPage -}}
+                            {{- $category := $value | anchorize | printf "/categories/%s" | $.Site.GetPage -}}
                             <a href="{{ $category.RelPermalink }}">
                                 <i class="far fa-folder fa-fw"></i>{{ $category.Title }}
                             </a>
@@ -66,22 +66,15 @@
         {{- end -}}
 
         {{- /* Static TOC */ -}}
-        {{- if $params.toc.enable -}}
-            <div class="toc" id="toc-static">
-                <details>
-                    <summary>
-                        <div class="toc-title">
-                            <span>{{ T "contents" }}</span>
-                            <span><i class="details icon fas fa-angle-down"></i></span>
-                        </div>
-                    </summary>
-                    <div class="toc-content" id="toc-content-static">
-                        {{- $toc := .TableOfContents -}}
-                        {{- $toc = partial "function/fontawesome.html" $toc -}}
-                        {{- $toc = partial "function/ruby.html" $toc -}}
-                        {{- $toc | safeHTML -}}
-                    </div>
-                </details>
+        {{- if ne $params.toc.enable false -}}
+            <div class="details toc" id="toc-static">
+                <div class="details-summary toc-title">
+                    <span>{{ T "contents" }}</span>
+                    <span><i class="details-icon fas fa-angle-down"></i></span>
+                </div>
+                <div class="details-content toc-content" id="toc-content-static">
+                    {{- dict "content" .TableOfContents "ruby" $params.ruby "fraction" $params.fraction "fontawesome" $params.fontawesome | partial "function/content.html" | safeHTML -}}
+                </div>
             </div>
         {{- end -}}
 

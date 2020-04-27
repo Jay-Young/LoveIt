@@ -6,6 +6,13 @@ header {
   .dark & {
     background-color: $header-background-color-dark;
   }
+
+  .logo {
+    min-height: 1.25em;
+    height: 1.25em;
+    vertical-align: text-bottom;
+    padding-right: .25rem;
+  }
 }
 
 .header-wrapper {
@@ -19,7 +26,7 @@ header {
 .header-title {
   font-family: $header-title-font-family;
   font-weight: bold;
-  margin-right: .5rem;
+  margin: 0 .5rem;
   min-width: 10%;
   overflow: hidden;
   white-space: nowrap;
@@ -57,7 +64,7 @@ header {
     outline: none;
     background-color: $header-background-color;
     vertical-align: baseline !important;
-    @include transition(width 0.3s ease 0s);
+    @include transition(width 0.3s ease);
 
     .dark & {
       background-color: $header-background-color-dark;
@@ -133,10 +140,10 @@ header {
   line-height: $header-height;
 
   .header-wrapper {
-    padding: 0 1.5rem;
+    padding: 0 10vw;
 
     .header-title {
-      font-size: $header-title-font-size-desktop;
+      font-size: $header-title-font-size;
     }
 
     .menu {
@@ -200,17 +207,17 @@ header {
     .header-wrapper {
       padding: 0 1rem;
       font-size: 1.125rem;
-      @include transition(margin-top 0.3s ease 0s);
+      @include transition(margin-top 0.3s ease);
 
       .header-title {
-        font-size: $header-title-font-size-mobile;
+        font-size: $header-title-font-size;
         max-width: 80%;
       }
 
       .menu-toggle {
         line-height: 4rem;
         cursor: pointer;
-        @include transition(width 0.3s ease 0s);
+        @include transition(width 0.3s ease);
 
         span {
           display: block;
@@ -322,7 +329,7 @@ header {
   @include box-shadow(0 .125rem .25rem rgba(0, 0, 0, .1));
 
   &.desktop {
-    right: 1.5rem;
+    right: 10vw;
     width: 30rem;
   }
 

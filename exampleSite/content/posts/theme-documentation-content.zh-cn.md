@@ -37,7 +37,7 @@ math:
 **Hugo** 允许你在文章内容前面添加 `yaml`, `toml` 或者 `json` 格式的前置参数.
 
 {{< admonition >}}
-**不是所有**的上述前置参数都必须在你的每篇文章中设置.
+**不是所有**的以下前置参数都必须在你的每篇文章中设置.
 只有在文章的参数和你的 [网站设置](../theme-documentation-basics/#site-configuration) 中的 `page` 部分不一致时才有必要这么做.
 {{< /admonition >}}
 
@@ -62,8 +62,8 @@ featuredImagePreview: ""
 
 hiddenFromHomePage: false
 hiddenFromSearch: false
+twemoji: false
 lightgallery: true
-copyCode: true
 ruby: true
 fraction: true
 fontawesome: true
@@ -72,6 +72,9 @@ linkToMarkdown: true
 toc:
   enable: true
   auto: true
+code:
+  copy: true
+  # ...
 math:
   enable: true
   # ...
@@ -104,7 +107,7 @@ comment:
 
 * **hiddenFromHomePage**: 如果设为 `true`, 这篇文章将不会显示在主页上.
 * **hiddenFromSearch**: {{< version 0.2.0 >}} 如果设为 `true`, 这篇文章将不会显示在搜索结果中.
-* **copyCode**: {{< version 0.2.0 >}} 如果设为 `true`, 这篇文章会显示代码块的复制按钮.
+* **twemoji**: {{< version 0.2.0 >}} 如果设为 `true`, 这篇文章会使用 twemoji.
 * **lightgallery**: 如果设为 `true`, 文章中的图片将可以按照画廊形式呈现.
 * **ruby**: {{< version 0.2.0 >}} 如果设为 `true`, 这篇文章会使用 [上标注释扩展语法](#ruby).
 * **fraction**: {{< version 0.2.0 >}} 如果设为 `true`, 这篇文章会使用 [分数扩展语法](#fraction).
@@ -112,6 +115,7 @@ comment:
 * **linkToMarkdown**: 如果设为 `true`, 内容的页脚将显示指向原始 Markdown 文件的链接.
 
 * **toc**: {{< version 0.2.0 changed >}} 和 [网站配置](../theme-documentation-basics/#site-configuration) 中的 `params.page.toc` 部分相同.
+* **code**: {{< version 0.2.0 >}} 和 [网站配置](../theme-documentation-basics/#site-configuration) 中的 `params.page.code` 部分相同.
 * **math**: {{< version 0.2.0 changed >}} 和 [网站配置](../theme-documentation-basics/#site-configuration) 中的 `params.page.math` 部分相同.
 * **mapbox**: {{< version 0.2.0 >}} 和 [网站配置](../theme-documentation-basics/#site-configuration) 中的 `params.page.mapbox` 部分相同.
 * **share**: 和 [网站配置](../theme-documentation-basics/#site-configuration) 中的 `params.page.share` 部分相同.
@@ -121,7 +125,7 @@ comment:
 
 **LoveIt** 主题使用内容摘要在主页中显示大致文章信息。Hugo 支持生成文章的摘要.
 
-![文章摘要预览](/images/theme-documentation-content/summary.jpg "文章摘要预览")
+![文章摘要预览](/images/theme-documentation-content/summary.zh-cn.png "文章摘要预览")
 
 ### 自动摘要拆分
 
@@ -287,14 +291,14 @@ $$ \ce{Hg^2+ ->[I-] HgI2 ->[I-] [Hg^{II}I4]^2-} $$
 从 [Font Awesome 网站](https://fontawesome.com/icons?d=gallery) 上获取所需的图标 `class`.
 
 ```markdown
-去露营啦! {?:}(fas fa-campground): 很快就回来.
+去露营啦! {?:}(fas fa-campground fa-fw): 很快就回来.
 
 真开心! {?:}(far fa-grin-tears):
 ```
 
 呈现的输出效果如下:
 
-去露营啦! :(fas fa-campground): 很快就回来.
+去露营啦! :(fas fa-campground fa-fw): 很快就回来.
 
 真开心! :(far fa-grin-tears):
 

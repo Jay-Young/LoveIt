@@ -46,12 +46,12 @@ John Gruber, Markdown 的作者如是说:
 > 虽然 Markdown 的语法受到几种现有的文本到 HTML 转换工具的影响,
 > 但 Markdown 语法的最大灵感来源是纯文本电子邮件的格式.
 >
-> -- _John Gruber_
+> {{< style "text-align: right;" >}}-- _John Gruber_{{< /style >}}
 
 话不多说, 我们来回顾一下 Markdown 的主要语法以及生成的 HTML 样式!
 
 {{< admonition tip >}}
-:(far fa-bookmark): 将此页保存为书签，以备将来参考!
+:(far fa-bookmark fa-fw): 将此页保存为书签，以备将来参考!
 {{< /admonition >}}
 
 ## 1 标题

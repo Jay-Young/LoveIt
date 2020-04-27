@@ -3,8 +3,10 @@
     {{- /* Featured image */ -}}
     {{- with $params.featuredimage -}}
         <div class="featured-image-preview">
-            {{- $image := $params.featuredimagepreview | default . -}}
-            {{- partial "plugin/image.html" (dict "src" $image "alt" $.Description "large" true) -}}
+            <a href="{{ $.RelPermalink }}">
+                {{- $image := $params.featuredimagepreview | default . -}}
+                {{- partial "plugin/image.html" (dict "src" $image "alt" $.Description "large" true) -}}
+            </a>
         </div>
     {{- end -}}
 
@@ -33,7 +35,7 @@
                 {{- T "included" -}}
                 {{- range $index, $value := . -}}
                     {{- if gt $index 0 }}&nbsp;{{ end -}}
-                    {{- $category := printf "/categories/%s" $value | $.Site.GetPage -}}
+                    {{- $category := $value | anchorize | printf "/categories/%s" | $.Site.GetPage -}}
                     <a href="{{ $category.RelPermalink }}">
                         <i class="far fa-folder fa-fw"></i>{{ $category.Title }}
                     </a>
@@ -59,7 +61,7 @@
                 <i class="fas fa-tags fa-fw"></i>&nbsp;
                 {{- range $index, $value := . -}}
                     {{- if gt $index 0 }},&nbsp;{{ end -}}
-                    {{- $tag := printf "/tags/%s" $value | $.Site.GetPage -}}
+                    {{- $tag := $value | anchorize | printf "/tags/%s" | $.Site.GetPage -}}
                     <a href="{{ $tag.RelPermalink }}">{{ $tag.Title }}</a>
                 {{- end -}}
             </div>

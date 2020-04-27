@@ -14,6 +14,9 @@ featuredImage: "/images/theme-documentation-extended-shortcodes/featured-image.j
 featuredImagePreview: "/images/theme-documentation-extended-shortcodes/featured-image-preview.jpg"
 
 lightgallery: true
+mapbox:
+  lightStyle: mapbox://styles/mapbox/light-zh-v1?optimize=true
+  darkStyle: mapbox://styles/mapbox/dark-zh-v1?optimize=true
 ---
 
 **LoveIt** 主题在 Hugo 内置的 shortcode 的基础上提供多个扩展的 shortcode.
@@ -22,26 +25,29 @@ lightgallery: true
 
 ## style
 
+{{< version 0.2.0 changed >}}
+
 `style` shortcode 用来在你的文章中插入自定义样式.
 
 `style` shortcode 有两个位置参数.
 
-第一个参数是自定义样式的内容.
+第一个参数是自定义样式的内容. 它支持 [SASS](https://sass-lang.com/documentation/style-rules/declarations#nesting) 中的嵌套语法,
+并且 `&` 指代这个父元素.
 
-第二个参数是包裹你要更改样式的内容的 HTML 标签, 默认值是 `p`.
+第二个参数是包裹你要更改样式的内容的 HTML 标签, 默认值是 `div`.
 
 一个 `style` 示例:
 
 ```markdown
-{{</* style "text-align: right;" */>}}
-This is a right-aligned paragraph.
+{{</* style "text-align:right; strong{color:#00b1ff;}" */>}}
+This is a **right-aligned** paragraph.
 {{</* /style */>}}
 ```
 
 呈现的输出效果如下:
 
-{{< style "text-align: right;" >}}
-This is a right-aligned paragraph.
+{{< style "text-align:right; strong{color:#00b1ff;}" >}}
+This is a **right-aligned** paragraph.
 {{< /style >}}
 
 ## link
@@ -964,16 +970,16 @@ data = [
 或者
 {{</* mapbox lng=121.485 lat=31.233 zoom=12 */>}}
 
-{{</* mapbox -122.252 37.453 10 false "mapbox://styles/mapbox/navigation-preview-day-v4" "mapbox://styles/mapbox/navigation-preview-night-v4" */>}}
+{{</* mapbox -122.252 37.453 10 false "mapbox://styles/mapbox/streets-zh-v1" */>}}
 或者
-{{</* mapbox lng=-122.252 lat=37.453 zoom=10 marked=false light-style="mapbox://styles/mapbox/navigation-preview-day-v4" dark-style="mapbox://styles/mapbox/navigation-preview-night-v4" */>}}
+{{</* mapbox lng=-122.252 lat=37.453 zoom=10 marked=false light-style="mapbox://styles/mapbox/streets-zh-v1" */>}}
 ```
 
 呈现的输出效果如下:
 
 {{< mapbox 121.485 31.233 12 >}}
 
-{{< mapbox -122.252 37.453 10 false "mapbox://styles/mapbox/navigation-preview-day-v4?optimize=true" "mapbox://styles/mapbox/navigation-preview-night-v4?optimize=true" >}}
+{{< mapbox -122.252 37.453 10 false "mapbox://styles/mapbox/streets-zh-v1?optimize=true" >}}
 
 ## music
 

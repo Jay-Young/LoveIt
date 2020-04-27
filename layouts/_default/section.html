@@ -1,18 +1,23 @@
 {{- define "title" }}
-    {{- .Title | default (T .Section) | default .Section | printf (T "allSome") }} | {{ .Site.Title -}}
+    {{- .Params.Title | default (T .Section) | default .Section | printf (T "allSome") }} | {{ .Site.Title -}}
 {{- end -}}
 
 {{- define "content" -}}
     <div class="page archive">
         {{- /* Title */ -}}
         <h2 class="single-title animated pulse faster">
-            {{- .Title | default (T .Section) | default .Section | printf (T "allSome") -}}
+            {{- .Params.Title | default (T .Section) | default .Section | printf (T "allSome") -}}
         </h2>
 
         {{- /* Paginate */ -}}
         {{- $pages := .Pages.GroupByDate "2006" -}}
-        {{- range (.Site.Params.section.paginate | default .Site.Params.paginate | .Paginate $pages).PageGroups -}}
-            <h3>{{ .Key }}</h3>
+        {{- with .Site.Params.section.paginate | default .Site.Params.paginate -}}
+            {{- $pages = $.Paginate $pages . -}}
+        {{- else -}}
+            {{- $pages = .Paginate $pages -}}
+        {{- end -}}
+        {{- range $pages.PageGroups -}}
+            <h3 class="group-title">{{ .Key }}</h3>
             {{- range .Pages -}}
                 <article class="archive-item">
                     <a href="{{ .RelPermalink }}" class="archive-item-link">

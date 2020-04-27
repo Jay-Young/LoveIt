@@ -82,17 +82,19 @@ I hope you will LoveIt ❤️!
 
 * **Gravatar** supported by [Gravatar](https://gravatar.com)
 * Local **Avatar** supported
-* Up to **62** social links supported
+* Up to **64** social links supported
 * Up to **28** share sites supported
 * **Disqus** comment system supported by [Disqus](https://disqus.com)
 * **Gitalk** comment system supported by [Gitalk](https://github.com/gitalk/gitalk)
 * **Valine** comment system supported by [Valine](https://valine.js.org/)
 * **Facebook comments** system supported by [Facebook](https://developers.facebook.com/docs/plugins/comments/)
-* **Telegram Comments** system supported by [Comments](https://comments.app/)
+* **Telegram comments** system supported by [Telegram Comments](https://comments.app/)
+* **Commento** comments system supported by [Commento](https://commento.io/)
 
 ### Extended Features
 
 * **Search** supported by [Lunr.js](https://lunrjs.com/) or [algolia](https://www.algolia.com/)
+* **Twemoji** supported
 * Automatically **highlighting** code
 * **Copy code** to clipboard with one click
 * **Images gallery** supported by [lightgallery.js](https://github.com/sachinchoolur/lightgallery.js)
@@ -128,6 +130,7 @@ LoveIt supports the following languages:
 * Simplified Chinese
 * French
 * Polish
+* Brazilian Portuguese
 * [Contribute with a new language](https://github.com/dillonzq/LoveIt/pulls)
 
 ## Questions, ideas, bugs, pull requests
@@ -142,13 +145,14 @@ Thanks to the authors of following resources included in the theme:
 
 * [normalize.css](https://github.com/necolas/normalize.css)
 * [Font Awesome](https://fontawesome.com/)
-* [Fork Awesome](https://forkaweso.me/Fork-Awesome/)
+* [Simple Icons](https://github.com/simple-icons/simple-icons)
 * [Animate.css](https://daneden.github.io/animate.css/)
 * [Smooth Scroll](https://github.com/cferdinandi/smooth-scroll)
 * [autocomplete.js](https://github.com/algolia/autocomplete.js)
 * [Lunr.js](https://lunrjs.com/)
 * [algoliasearch](https://github.com/algolia/algoliasearch-client-javascript)
 * [lazysizes](https://github.com/aFarkas/lazysizes)
+* [Twemoji](https://github.com/twitter/twemoji)
 * [lightgallery.js](https://github.com/sachinchoolur/lightgallery.js)
 * [clipboard.js](https://github.com/zenorocha/clipboard.js)
 * [Sharer.js](https://github.com/ellisonleao/sharer.js)

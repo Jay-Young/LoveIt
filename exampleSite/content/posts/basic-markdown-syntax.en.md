@@ -46,12 +46,12 @@ John Gruber, the author of Markdown, puts it like this:
 > While Markdown’s syntax has been influenced by several existing text-to-HTML filters,
 > the single biggest source of inspiration for Markdown’s syntax is the format of plain text email.
 >
-> -- _John Gruber_
+> {{< style "text-align: right;" >}}-- _John Gruber_{{< /style >}}
 
 Without further delay, let us go over the main elements of Markdown and what the resulting HTML looks like!
 
 {{< admonition tip >}}
-:(far fa-bookmark): Bookmark this page for easy future reference!
+:(far fa-bookmark fa-fw): Bookmark this page for easy future reference!
 {{< /admonition >}}
 
 ## 1 Headings
@@ -416,7 +416,7 @@ The rendered output looks like this:
 
 ### Task Lists
 
-Task lists allow you to create a list of items with checkboxes. To create a task list, add dashes (`-`) and brackets with a space (`[ ]`) in front of task list items. To select a checkbox, add an x in between the brackets (`[x]`).
+Task lists allow you to create a list of items with checkboxes. To create a task list, add dashes (`-`) and brackets with a space (`[ ]`) before task list items. To select a checkbox, add an x in between the brackets (`[x]`).
 
 ```markdown
 - [x] Write the press release

@@ -44,6 +44,8 @@ enableEmoji = true
         identifier = "posts"
         # you can add extra information before the name (HTML format is supported), such as icons
         pre = ""
+        # you can add extra information after the name (HTML format is supported), such as icons
+        post = ""
         name = "Posts"
         url = "/posts/"
         # title will be shown when you hover on this menu link.
@@ -52,6 +54,7 @@ enableEmoji = true
       [[languages.en.menu.main]]
         identifier = "tags"
         pre = ""
+        post = ""
         name = "Tags"
         url = "/tags/"
         title = ""
@@ -59,6 +62,7 @@ enableEmoji = true
       [[languages.en.menu.main]]
         identifier = "categories"
         pre = ""
+        post = ""
         name = "Categories"
         url = "/categories/"
         title = ""
@@ -66,6 +70,7 @@ enableEmoji = true
       [[languages.en.menu.main]]
         identifier = "documentation"
         pre = ""
+        post = ""
         name = "Docs"
         url = "/categories/documentation/"
         title = ""
@@ -73,6 +78,7 @@ enableEmoji = true
       [[languages.en.menu.main]]
         identifier = "about"
         pre = ""
+        post = ""
         name = "About"
         url = "/about/"
         title = ""
@@ -89,6 +95,20 @@ enableEmoji = true
       description = "About LoveIt Theme"
       # site keywords
       keywords = ["Theme", "Hugo"]
+      # App icon config
+      [languages.en.params.app]
+        # optional site title override for the app when added to an iOS home screen or Android launcher
+        title = "LoveIt"
+        # whether to omit favicon resource links
+        noFavicon = false
+        # modern SVG favicon to use in place of older style .png and .ico files
+        svgFavicon = ""
+        # Android browser theme color
+        themeColor = "#ffffff"
+        # Safari mask icon color
+        iconColor = "#5bbad5"
+        # Windows v8-10 tile color
+        tileColor = "#da532c"
       # Search config
       [languages.en.params.search]
         enable = true
@@ -129,149 +149,71 @@ enableEmoji = true
       # Social config in home page
       [languages.en.params.social]
         GitHub = "xxxx"
-        Linkedin = "xxxx"
+        Linkedin = ""
         Twitter = "xxxx"
         Instagram = "xxxx"
-        Email = "xxxx@xxxx.com"
         Facebook = "xxxx"
         Telegram = "xxxx"
-        # Medium = "xxxx"
-        # Gitlab = "xxxx"
+        Medium = ""
+        Gitlab = ""
         Youtubelegacy = "xxxx"
-        # Youtubecustom = "xxxx"
-        # Youtubechannel = "xxxx"
-        # Tumblr ="xxxx"
-        # Quora = "xxxx"
-        # Keybase = "xxxx"
-        # Pinterest = "xxxx"
-        # Reddit = "xxxx"
-        # Codepen = "xxxx"
-        # FreeCodeCamp = "xxxx"
-        # Bitbucket = "xxxx"
-        # Stackoverflow = "xxxx"
-        # Weibo = "xxxx"
-        # Odnoklassniki = "xxxx"
-        # VK = "xxxx"
-        # Flickr = "xxxx"
-        # Xing = "xxxx"
-        # Snapchat = "xxxx"
-        # Soundcloud = "xxxx"
-        # Spotify = "xxxx"
-        # Bandcamp = "xxxx"
-        # Paypal = "xxxx"
-        # Fivehundredpx = "xxxx"
-        # Mix = "xxxx"
-        # Goodreads = "xxxx"
-        # Lastfm = "xxxx"
-        # Foursquare = "xxxx"
-        # Hackernews = "xxxx"
-        # Kickstarter = "xxxx"
-        # Patreon = "xxxx"
-        # Steam = "xxxx"
-        # Twitch = "xxxx"
-        # Strava = "xxxx"
-        # Skype = "xxxx"
-        # Whatsapp = "xxxx"
-        # Zhihu = "xxxx"
-        # Douban = "xxxx"
-        # Angellist = "xxxx"
-        # Slidershare = "xxxx"
-        # Jsfiddle = "xxxx"
-        # Deviantart = "xxxx"
-        # Behance = "xxxx"
-        # Dribble = "xxxx"
-        # Wordpress = "xxxx"
-        # Vine = "xxxx"
-        # Googlescholar = "xxxx"
-        # Researchgate = "xxxx"
-        # Mastodon = "xxxx"
-        # MastodonPrefix = "https://mastodon.technology/"
-        # Thingiverse = "xxxx"
-        # Devto = "xxxx"
-        # Gitea = "xxxx"
-        # XMPP = "xxxx"
-        # Matrix = "xxxx"
-        # Bilibili = "xxxx"
-      # Social Share Links in post page
-      [languages.en.params.share]
-        enable = true
-        Twitter = true
-        Facebook = true
-        Linkedin = true
-        Whatsapp = true
-        Pinterest = true
-        # Tumblr = true
-        HackerNews = true
-        # Reddit = true
-        # VK = true
-        # Buffer = true
-        # Xing = true
-        # Line = true
-        # Instapaper = true
-        # Pocket = true
-        # Digg = true
-        # Stumbleupon = true
-        # Flipboard = true
-        # Weibo = true
-        # Renren = true
-        # Myspace = true
-        # Blogger = true
-        # Baidu = true
-        # Odnoklassniki = true
-        # Evernote = true
-        # Skype = true
-        # Trello = true
-        # Mix = true
-        # Weixin = true
-        # Douban = true
-        # Qzone = true
-      # Comment Config
-      [languages.en.params.comment]
-        enable = true
-        # Disqus Comment Config (https://disqus.com/)
-        [languages.en.params.comment.disqus]
-          enable = false
-          # Disqus shortname to use Disqus in posts
-          shortname = ""
-        # Gitalk Comment Config (https://github.com/gitalk/gitalk)
-        [languages.en.params.comment.gitalk]
-          enable = false
-          owner = ""
-          repo = ""
-          clientId = ""
-          clientSecret = ""
-        # Valine Comment Config (https://github.com/xCss/Valine)
-        [languages.en.params.comment.valine]
-          enable = true
-          appId = "QGzwQXOqs5JOhN4RGPOkR2mR-MdYXbMMI"
-          appKey = "WBmoGyJtbqUswvfLh6L8iEBr"
-          placeholder = "Your comment ..."
-          notify = false
-          verify = true
-          avatar = "mp"
-          meta= ""
-          pageSize = 10
-          lang = "en"
-          visitor = true
-          recordIP = true
-        # Facebook Comment Config (https://developers.facebook.com/docs/plugins/comments)
-        [languages.en.params.comment.facebook]
-          enable = false
-          width = "100%"
-          numPosts = 10
-          appId = ""
-          languageCode = "en_US"
-        # Telegram Comments Config (https://comments.app/)
-        [languages.en.params.comment.telegram]
-          enable = false
-          siteID = ""
-          limit = 5
-          height = ""
-          color = ""
-          colorful = true
-          dislikes = false
-          outlined = false
+        Youtubecustom = ""
+        Youtubechannel = ""
+        Tumblr = ""
+        Quora = ""
+        Keybase = ""
+        Pinterest = ""
+        Reddit = ""
+        Codepen = ""
+        FreeCodeCamp = ""
+        Bitbucket = ""
+        Stackoverflow = ""
+        Weibo = ""
+        Odnoklassniki = ""
+        VK = ""
+        Flickr = ""
+        Xing = ""
+        Snapchat = ""
+        Soundcloud = ""
+        Spotify = ""
+        Bandcamp = ""
+        Paypal = ""
+        Fivehundredpx = ""
+        Mix = ""
+        Goodreads = ""
+        Lastfm = ""
+        Foursquare = ""
+        Hackernews = ""
+        Kickstarter = ""
+        Patreon = ""
+        Steam = ""
+        Twitch = ""
+        Strava = ""
+        Skype = ""
+        Whatsapp = ""
+        Zhihu = ""
+        Douban = ""
+        Angellist = ""
+        Slidershare = ""
+        Jsfiddle = ""
+        Deviantart = ""
+        Behance = ""
+        Dribbble = ""
+        Wordpress = ""
+        Vine = ""
+        Googlescholar = ""
+        Researchgate = ""
+        Thingiverse = ""
+        Devto = ""
+        Gitea = ""
+        XMPP = ""
+        Matrix = ""
+        Bilibili = ""
+        Email = "xxxx@xxxx.com"
         RSS = true
+        [languages.en.params.social.Mastodon]
+          id = "@xxxx"
+          prefix = "https://mastodon.technology/"
 
   [languages.zh-cn]
     weight = 2
@@ -291,7 +233,10 @@ enableEmoji = true
     [languages.zh-cn.menu]
       [[languages.zh-cn.menu.main]]
         identifier = "posts"
+        # 你可以在名称 (允许 HTML 格式) 之前添加其他信息, 例如图标
         pre = ""
+        # 你可以在名称 (允许 HTML 格式) 之后添加其他信息, 例如图标
+        post = ""
         name = "所有文章"
         url = "/posts/"
         title = ""
@@ -299,6 +244,7 @@ enableEmoji = true
       [[languages.zh-cn.menu.main]]
         identifier = "tags"
         pre = ""
+        post = ""
         name = "标签"
         url = "/tags/"
         title = ""
@@ -306,6 +252,7 @@ enableEmoji = true
       [[languages.zh-cn.menu.main]]
         identifier = "categories"
         pre = ""
+        post = ""
         name = "分类"
         url = "/categories/"
         title = ""
@@ -320,6 +267,7 @@ enableEmoji = true
       [[languages.zh-cn.menu.main]]
         identifier = "about"
         pre = ""
+        post = ""
         name = "关于"
         url = "/about/"
         title = ""
@@ -336,6 +284,20 @@ enableEmoji = true
       description = "关于 LoveIt 主题"
       # 网站关键词
       keywords = ["Theme", "Hugo"]
+      # 应用图标配置
+      [languages.zh-cn.params.app]
+        # 当添加到 iOS 主屏幕或者 Android 启动器时的标题, 覆盖默认标题
+        title = "LoveIt"
+        # 是否隐藏网站图标资源链接
+        noFavicon = false
+        # 更现代的 SVG 网站图标, 可替代旧的 .png 和 .ico 文件
+        svgFavicon = ""
+        # Android 浏览器主题色
+        themeColor = "#ffffff"
+        # Safari 图标颜色
+        iconColor = "#5bbad5"
+        # Windows v8-10 磁贴颜色
+        tileColor = "#da532c"
       # 搜索配置
       [languages.zh-cn.params.search]
         enable = true
@@ -376,148 +338,68 @@ enableEmoji = true
       # 主页的社交信息设置
       [languages.zh-cn.params.social]
         GitHub = "xxxx"
-        # Linkedin = "xxxx"
-        Twitter = "xxxx"
-        Instagram = "xxxx"
-        Email = "xxxx@example.com"
-        # Facebook = "xxxx"
-        # Telegram = "xxxx"
-        # Medium = "xxxx"
-        # Gitlab = "xxxx"
-        # Youtubelegacy = "xxxx"
-        # Youtubecustom = "xxxx"
-        # Youtubechannel = "xxxx"
-        # Tumblr ="xxxx"
-        # Quora = "xxxx"
-        # Keybase = "xxxx"
-        # Pinterest = "xxxx"
-        # Reddit = "xxxx"
-        # Codepen = "xxxx"
-        # FreeCodeCamp = "xxxx"
-        # Bitbucket = "xxxx"
-        # Stackoverflow = "xxxx"
+        Linkedin = ""
+        Twitter = ""
+        Instagram = ""
+        Facebook = ""
+        Telegram = ""
+        Medium = ""
+        Gitlab = ""
+        Youtubelegacy = ""
+        Youtubecustom = ""
+        Youtubechannel = ""
+        Tumblr = ""
+        Quora = ""
+        Keybase = ""
+        Pinterest = ""
+        Reddit = ""
+        Codepen = ""
+        FreeCodeCamp = ""
+        Bitbucket = ""
+        Stackoverflow = ""
         Weibo = "xxxx"
-        # Odnoklassniki = "xxxx"
-        # VK = "xxxx"
-        # Flickr = "xxxx"
-        # Xing = "xxxx"
-        # Snapchat = "xxxx"
-        # Soundcloud = "xxxx"
-        # Spotify = "xxxx"
-        # Bandcamp = "xxxx"
-        # Paypal = "xxxx"
-        # Fivehundredpx = "xxxx"
-        # Mix = "xxxx"
-        # Goodreads = "xxxx"
-        # Lastfm = "xxxx"
-        # Foursquare = "xxxx"
-        # Hackernews = "xxxx"
-        # Kickstarter = "xxxx"
-        # Patreon = "xxxx"
+        Odnoklassniki = ""
+        VK = ""
+        Flickr = ""
+        Xing = ""
+        Snapchat = ""
+        Soundcloud = ""
+        Spotify = ""
+        Bandcamp = ""
+        Paypal = ""
+        Fivehundredpx = ""
+        Mix = ""
+        Goodreads = ""
+        Lastfm = ""
+        Foursquare = ""
+        Hackernews = ""
+        Kickstarter = ""
+        Patreon = ""
         Steam = "xxxx"
-        # Twitch = "xxxx"
-        # Strava = "xxxx"
-        # Skype = "xxxx"
-        # Whatsapp = "xxxx"
+        Twitch = ""
+        Strava = ""
+        Skype = ""
+        Whatsapp = ""
         Zhihu = "xxxx"
-        # Douban = "xxxx"
-        # Angellist = "xxxx"
-        # Slidershare = "xxxx"
-        # Jsfiddle = "xxxx"
-        # Deviantart = "xxxx"
-        # Behance = "xxxx"
-        # Dribble = "xxxx"
-        # Wordpress = "xxxx"
-        # Vine = "xxxx"
-        # Googlescholar = "xxxx"
-        # Researchgate = "xxxx"
-        # Mastodon = "@xxxx"
-        # MastodonPrefix = "https://mastodon.technology/"
-        # Thingiverse = "xxxx"
-        # Devto = "xxxx"
-        # Gitea = "xxxx"
-        # XMPP = "xxxx@example.com"
-        # Matrix = "xxxx"
+        Douban = "xxxx"
+        Angellist = ""
+        Slidershare = ""
+        Jsfiddle = ""
+        Deviantart = ""
+        Behance = ""
+        Dribbble = ""
+        Wordpress = ""
+        Vine = ""
+        Googlescholar = ""
+        Researchgate = ""
+        Mastodon = ""
+        Thingiverse = ""
+        Devto = "xxxx"
+        Gitea = ""
+        XMPP = ""
+        Matrix = ""
         Bilibili = "xxxx"
-      # 文章页面的分享信息设置
-      [languages.zh-cn.params.share]
-        enable = true
-        Twitter = true
-        Facebook = true
-        # Linkedin = true
-        # Whatsapp = true
-        # Pinterest = true
-        # Tumblr = true
-        # HackerNews = true
-        # Reddit = true
-        # VK = true
-        # Buffer = true
-        # Xing = true
-        # Line = true
-        # Instapaper = true
-        # Pocket = true
-        # Digg = true
-        # Stumbleupon = true
-        # Flipboard = true
-        Weibo = true
-        Renren = true
-        # Myspace = true
-        # Blogger = true
-        Baidu = true
-        # Odnoklassniki = true
-        Evernote = true
-        # Skype = true
-        # Trello = true
-        # Mix = true
-        # Weixin = true
-        # Douban = true
-        # Qzone = true
-      # 评论系统设置
-      [languages.zh-cn.params.comment]
-        enable = true
-        # Disqus 评论系统设置 (https://disqus.com/)
-        [languages.zh-cn.params.comment.disqus]
-          enable = false
-          # Disqus 的 shortname，用来在文章中启用 Disqus 评论系统
-          shortname = ""
-        # Gitalk 评论系统设置 (https://github.com/gitalk/gitalk)
-        [languages.zh-cn.params.comment.gitalk]
-          enable = false
-          owner = ""
-          repo = ""
-          clientId = ""
-          clientSecret = ""
-        # Valine 评论系统设置 (https://github.com/xCss/Valine)
-        [languages.zh-cn.params.comment.valine]
-          enable = true
-          appId = "QGzwQXOqs5JOhN4RGPOkR2mR-MdYXbMMI"
-          appKey = "WBmoGyJtbqUswvfLh6L8iEBr"
-          placeholder = "你的评论 ..."
-          notify = false
-          verify = true
-          avatar = "mp"
-          meta= ""
-          pageSize = 10
-          lang = "zh-cn"
-          visitor = true
-          recordIP = true
-        # Facebook 评论系统设置 (https://developers.facebook.com/docs/plugins/comments)
-        [languages.zh-cn.params.comment.facebook]
-          enable = false
-          width = "100%"
-          numPosts = 10
-          appId = ""
-          languageCode = "zh_CN"
-        # Telegram Comments 评论系统设置 (https://comments.app/)
-        [languages.zh-cn.params.comment.telegram]
-          enable = false
-          siteID = ""
-          limit = 5
-          height = ""
-          color = ""
-          colorful = true
-          dislikes = false
-          outlined = false
+        Email = "xxxx@xxxx.com"
         RSS = true
 
   [languages.fr]
@@ -539,6 +421,7 @@ enableEmoji = true
       [[languages.fr.menu.main]]
         identifier = "posts"
         pre = ""
+        post = ""
         name = "Postes"
         url = "/posts/"
         title = ""
@@ -546,6 +429,7 @@ enableEmoji = true
       [[languages.fr.menu.main]]
         identifier = "tags"
         pre = ""
+        post = ""
         name = "Balises"
         url = "/tags/"
         title = ""
@@ -553,6 +437,7 @@ enableEmoji = true
       [[languages.fr.menu.main]]
         identifier = "categories"
         pre = ""
+        post = ""
         name = "Catégories"
         url = "/categories/"
         title = ""
@@ -560,6 +445,7 @@ enableEmoji = true
       [[languages.fr.menu.main]]
         identifier = "documentation"
         pre = ""
+        post = ""
         name = "Docs"
         url = "/categories/documentation/"
         title = ""
@@ -583,6 +469,20 @@ enableEmoji = true
       description = "À propos du thème LoveIt"
       # site keywords
       keywords = ["Thème", "Hugo"]
+      # App icon config
+      [languages.fr.params.app]
+        # optional site title override for the app when added to an iOS home screen or Android launcher
+        title = "LoveIt"
+        # whether to omit favicon resource links
+        noFavicon = false
+        # modern SVG favicon to use in place of older style .png and .ico files
+        svgFavicon = ""
+        # Android browser theme color
+        themeColor = "#ffffff"
+        # Safari mask icon color
+        iconColor = "#5bbad5"
+        # Windows v8-10 tile color
+        tileColor = "#da532c"
       # Search config
       [languages.fr.params.search]
         enable = true
@@ -625,146 +525,66 @@ enableEmoji = true
         GitHub = "xxxx"
         Linkedin = "xxxx"
         Twitter = "xxxx"
-        Instagram = "xxxx"
+        Instagram = ""
+        Facebook = ""
+        Telegram = ""
+        Medium = ""
+        Gitlab = ""
+        Youtubelegacy = ""
+        Youtubecustom = ""
+        Youtubechannel = ""
+        Tumblr = ""
+        Quora = ""
+        Keybase = ""
+        Pinterest = ""
+        Reddit = ""
+        Codepen = ""
+        FreeCodeCamp = ""
+        Bitbucket = ""
+        Stackoverflow = ""
+        Weibo = ""
+        Odnoklassniki = ""
+        VK = ""
+        Flickr = ""
+        Xing = ""
+        Snapchat = "xxxx"
+        Soundcloud = ""
+        Spotify = ""
+        Bandcamp = ""
+        Paypal = ""
+        Fivehundredpx = ""
+        Mix = ""
+        Goodreads = ""
+        Lastfm = ""
+        Foursquare = ""
+        Hackernews = "xxxx"
+        Kickstarter = ""
+        Patreon = ""
+        Steam = ""
+        Twitch = ""
+        Strava = ""
+        Skype = ""
+        Whatsapp = ""
+        Zhihu = ""
+        Douban = ""
+        Angellist = ""
+        Slidershare = ""
+        Jsfiddle = ""
+        Deviantart = ""
+        Behance = ""
+        Dribbble = "xxxx"
+        Wordpress = ""
+        Vine = ""
+        Googlescholar = ""
+        Researchgate = ""
+        Mastodon = ""
+        Thingiverse = ""
+        Devto = ""
+        Gitea = ""
+        XMPP = ""
+        Matrix = ""
+        Bilibili = ""
         Email = "xxxx@xxxx.com"
-        Facebook = "xxxx"
-        Telegram = "xxxx"
-        # Medium = "xxxx"
-        # Gitlab = "xxxx"
-        Youtubelegacy = "xxxx"
-        # Youtubecustom = "xxxx"
-        # Youtubechannel = "xxxx"
-        # Tumblr ="xxxx"
-        # Quora = "xxxx"
-        # Keybase = "xxxx"
-        # Pinterest = "xxxx"
-        # Reddit = "xxxx"
-        # Codepen = "xxxx"
-        # FreeCodeCamp = "xxxx"
-        # Bitbucket = "xxxx"
-        # Stackoverflow = "xxxx"
-        # Weibo = "xxxx"
-        # Odnoklassniki = "xxxx"
-        # VK = "xxxx"
-        # Flickr = "xxxx"
-        # Xing = "xxxx"
-        # Snapchat = "xxxx"
-        # Soundcloud = "xxxx"
-        # Spotify = "xxxx"
-        # Bandcamp = "xxxx"
-        # Paypal = "xxxx"
-        # Fivehundredpx = "xxxx"
-        # Mix = "xxxx"
-        # Goodreads = "xxxx"
-        # Lastfm = "xxxx"
-        # Foursquare = "xxxx"
-        # Hackernews = "xxxx"
-        # Kickstarter = "xxxx"
-        # Patreon = "xxxx"
-        # Steam = "xxxx"
-        # Twitch = "xxxx"
-        # Strava = "xxxx"
-        # Skype = "xxxx"
-        # Whatsapp = "xxxx"
-        # Zhihu = "xxxx"
-        # Douban = "xxxx"
-        # Angellist = "xxxx"
-        # Slidershare = "xxxx"
-        # Jsfiddle = "xxxx"
-        # Deviantart = "xxxx"
-        # Behance = "xxxx"
-        # Dribble = "xxxx"
-        # Wordpress = "xxxx"
-        # Vine = "xxxx"
-        # Googlescholar = "xxxx"
-        # Researchgate = "xxxx"
-        # Mastodon = "xxxx"
-        # MastodonPrefix = "https://mastodon.technology/"
-        # Thingiverse = "xxxx"
-        # Devto = "xxxx"
-        # Gitea = "xxxx"
-        # XMPP = "xxxx"
-        # Matrix = "xxxx"
-        # Bilibili = "xxxx"
-      # Social Share Links in post page
-      [languages.fr.params.share]
-        enable = true
-        Twitter = true
-        Facebook = true
-        Linkedin = true
-        Whatsapp = true
-        Pinterest = true
-        # Tumblr = true
-        HackerNews = true
-        # Reddit = true
-        # VK = true
-        # Buffer = true
-        # Xing = true
-        # Line = true
-        # Instapaper = true
-        # Pocket = true
-        # Digg = true
-        # Stumbleupon = true
-        # Flipboard = true
-        # Weibo = true
-        # Renren = true
-        # Myspace = true
-        # Blogger = true
-        # Baidu = true
-        # Odnoklassniki = true
-        # Evernote = true
-        # Skype = true
-        # Trello = true
-        # Mix = true
-        # Weixin = true
-        # Douban = true
-        # Qzone = true
-      # Comment Config
-      [languages.fr.params.comment]
-        enable = true
-        # Disqus Comment Config (https://disqus.com/)
-        [languages.fr.params.comment.disqus]
-          enable = false
-          # Disqus shortname to use Disqus in posts
-          shortname = ""
-        # Gitalk Comment Config (https://github.com/gitalk/gitalk)
-        [languages.fr.params.comment.gitalk]
-          enable = false
-          owner = ""
-          repo = ""
-          clientId = ""
-          clientSecret = ""
-        # Valine Comment Config (https://github.com/xCss/Valine)
-        [languages.fr.params.comment.valine]
-          enable = true
-          appId = "QGzwQXOqs5JOhN4RGPOkR2mR-MdYXbMMI"
-          appKey = "WBmoGyJtbqUswvfLh6L8iEBr"
-          placeholder = "Votre commentaire ..."
-          notify = false
-          verify = true
-          avatar = "mp"
-          meta= ""
-          pageSize = 10
-          lang = "en"
-          visitor = true
-          recordIP = true
-        # Facebook Comment Config (https://developers.facebook.com/docs/plugins/comments)
-        [languages.fr.params.comment.facebook]
-          enable = false
-          width = "100%"
-          numPosts = 10
-          appId = ""
-          languageCode = "fr"
-        # Telegram Comments Config (https://comments.app/)
-        [languages.fr.params.comment.telegram]
-          enable = false
-          siteID = ""
-          limit = 5
-          height = ""
-          color = ""
-          colorful = true
-          dislikes = false
-          outlined = false
         RSS = true
 
 [params]
@@ -801,6 +621,21 @@ enableEmoji = true
     # mobile header mode ("fixed", "normal", "auto")
     # 移动端导航栏模式 ("fixed", "normal", "auto")
     mobileMode = "auto"
+    # Header title config
+    # 页面头部导航栏标题配置
+    [params.header.title]
+      # URL of the LOGO
+      # LOGO 的 URL
+      logo = ""
+      # title name
+      # 标题名称
+      name = "LoveIt"
+      # you can add extra information before the name (HTML format is supported), such as icons
+      # 你可以在名称 (允许 HTML 格式) 之前添加其他信息, 例如图标
+      pre = "<i class='far fa-kiss-wink-heart fa-fw'></i> "
+      # you can add extra information after the name (HTML format is supported), such as icons
+      # 你可以在名称 (允许 HTML 格式) 之后添加其他信息, 例如图标
+      post = ""
 
   # Footer config
   # 页面底部信息配置
@@ -863,12 +698,12 @@ enableEmoji = true
     # whether to hide a page from search results
     # 是否在搜索结果中隐藏一篇文章
     hiddenFromSearch = false
+    # whether to enable twemoji
+    # 是否使用 twemoji
+    twemoji = false
     # whether to enable lightgallery
     # 是否使用 lightgallery
     lightgallery = false
-    # whether to show the copy button of the code block
-    # 是否显示代码块的复制按钮
-    copyCode = true
     # whether to enable the ruby extended syntax
     # 是否使用 ruby 扩展语法
     ruby = true
@@ -890,6 +725,15 @@ enableEmoji = true
       # whether to make the table of the contents automatically collapsed
       # 是否使目录自动折叠展开
       auto = true
+    # Code config
+    # 代码配置
+    [params.page.code]
+      # whether to show the copy button of the code block
+      # 是否显示代码块的复制按钮
+      copy = true
+      # the maximum number of lines of displayed code by default
+      # 默认展开显示的代码行数
+      maxShownLines = 10
     # KaTeX mathematical formulas config (KaTeX https://katex.org/)
     # KaTeX 数学公式配置 (KaTeX https://katex.org/)
     [params.page.math]
@@ -899,7 +743,7 @@ enableEmoji = true
       blockLeftDelimiter = ""
       blockRightDelimiter = ""
       # default inline delimiter is $ ... $ and \\( ... \\)
-      # 默认内联定界符是 $ ... $ 和 \\( ... \\)
+      # 默认行内定界符是 $ ... $ 和 \\( ... \\)
       inlineLeftDelimiter = ""
       inlineRightDelimiter = ""
       # KaTeX extension copy_tex
@@ -916,10 +760,10 @@ enableEmoji = true
       accessToken = "pk.eyJ1IjoiZGlsbG9uenEiLCJhIjoiY2s2czd2M2x3MDA0NjNmcGxmcjVrZmc2cyJ9.aSjv2BNuZUfARvxRYjSVZQ"
       # style for the light theme
       # 浅色主题的地图样式
-      lightStyle = "mapbox://styles/mapbox/light-v9?optimize=true"
+      lightStyle = "mapbox://styles/mapbox/light-v10?optimize=true"
       # style for the dark theme
       # 深色主题的地图样式
-      darkStyle = "mapbox://styles/mapbox/dark-v9?optimize=true"
+      darkStyle = "mapbox://styles/mapbox/dark-v10?optimize=true"
       # whether to add NavigationControl (https://docs.mapbox.com/mapbox-gl-js/api/#navigationcontrol)
       # 是否添加 NavigationControl (https://docs.mapbox.com/mapbox-gl-js/api/#navigationcontrol)
       navigation = true
@@ -947,14 +791,14 @@ enableEmoji = true
       # VK = true
       # Buffer = true
       # Xing = true
-      # Line = true
+      Line = true
       # Instapaper = true
       # Pocket = true
       # Digg = true
       # Stumbleupon = true
       # Flipboard = true
       Weibo = true
-      Renren = true
+      # Renren = true
       # Myspace = true
       # Blogger = true
       Baidu = true
@@ -989,8 +833,6 @@ enableEmoji = true
         appId = "QGzwQXOqs5JOhN4RGPOkR2mR-MdYXbMMI"
         appKey = "WBmoGyJtbqUswvfLh6L8iEBr"
         placeholder = ""
-        notify = false
-        verify = true
         avatar = "mp"
         meta= ""
         pageSize = 10
@@ -1006,7 +848,7 @@ enableEmoji = true
         appId = ""
         languageCode = ""
       # Telegram comments config (https://comments.app/)
-      # Telegram Comments 评论系统设置 (https://comments.app/)
+      # Telegram comments 评论系统设置 (https://comments.app/)
       [params.page.comment.telegram]
         enable = false
         siteID = ""
@@ -1016,6 +858,10 @@ enableEmoji = true
         colorful = true
         dislikes = false
         outlined = false
+      # Commento comments config (https://commento.io/)
+      # Commento comments 评论系统设置 (https://commento.io/)
+      [params.page.comment.commento]
+        enable = false
     # SEO config
     # SEO 配置
     [params.page.seo]
@@ -1074,20 +920,25 @@ enableEmoji = true
   [params.cdn]
     # normalize.css@8.0.1 https://github.com/necolas/normalize.css
     normalizeCSS = ''
-    # fontawesome-free@5.12.1 https://fontawesome.com/
+    # fontawesome-free@5.13.0 https://fontawesome.com/
     fontawesomeFreeCSS = ''
+    # simple-icons@2.9.0 https://github.com/simple-icons/simple-icons
+    # ('https://cdn.jsdelivr.net/npm/simple-icons@v2/icons/')
+    simpleIconsPrefix = ''
     # animate.css@3.7.2 https://github.com/daneden/animate.css
     animateCSS = ''
-    # smooth-scroll@16.1.2 https://github.com/cferdinandi/smooth-scroll
+    # smooth-scroll@16.1.3 https://github.com/cferdinandi/smooth-scroll
     smoothScrollJS = ''
     # autocomplete.js@0.37.1 https://github.com/algolia/autocomplete.js
     autocompleteJS = ''
     # lunr.js@2.3.8 https://lunrjs.com/
     lunrJS = ''
-    # algoliasearch@4.1.0 https://github.com/algolia/algoliasearch-client-javascript
+    # algoliasearch@4.2.0 https://github.com/algolia/algoliasearch-client-javascript
     algoliasearchJS = ''
     # lazysizes@5.2.0 https://github.com/aFarkas/lazysizes
     lazysizesJS = ''
+    # twemoji@12.1.5 https://github.com/twitter/twemoji
+    twemojiJS = ''
     # lightgallery.js@1.1.3 lg-thumbnail@1.1.0 lg-zoom@1.1.0 https://github.com/sachinchoolur/lightgallery.js
     lightgalleryCSS = ''
     lightgalleryJS = ''
@@ -1095,9 +946,9 @@ enableEmoji = true
     lightgalleryZoomJS = ''
     # clipboard.js@2.0.6 https://github.com/zenorocha/clipboard.js
     clipboardJS = ''
-    # sharer@0.4.0 https://github.com/ellisonleao/sharer.js
+    # sharer.js@0.4.0 https://github.com/ellisonleao/sharer.js
     sharerJS = ''
-    # typeit@6.5.1 https://github.com/alexmacarthur/typeit
+    # typeit@7.0.3 https://github.com/alexmacarthur/typeit
     typeitJS = ''
     # katex@0.11.1 https://katex.org/
     katexCSS = ''
@@ -1106,12 +957,12 @@ enableEmoji = true
     katexCopyTexCSS = ''
     katexCopyTexJS = ''
     katexMhchemJS = ''
-    # mermaid@8.4.8 https://github.com/knsv/mermaid
+    # mermaid@8.5.0 https://github.com/knsv/mermaid
     mermaidJS = ''
-    # echarts@4.6.0 https://echarts.apache.org/
+    # echarts@4.7.0 https://echarts.apache.org/
     echartsJS = ''
     echartsMacaronsJS = ''
-    # mapbox-gl@1.8.1 https://docs.mapbox.com/mapbox-gl-js
+    # mapbox-gl@1.9.1 https://docs.mapbox.com/mapbox-gl-js
     mapboxGLCSS = ''
     mapboxGLJS = ''
     # aplayer@1.10.1 https://github.com/MoePlayer/APlayer
@@ -1122,7 +973,7 @@ enableEmoji = true
     # gitalk@1.6.2 https://github.com/gitalk/gitalk
     gitalkCSS = ''
     gitalkJS = ''
-    # valine@1.3.10 https://valine.js.org/
+    # valine@1.4.9 https://valine.js.org/
     valineJS = ''
     # live2d-widget@0.7.2 https://github.com/stevenjoezhang/live2d-widget
     live2dwidgetJS = ''

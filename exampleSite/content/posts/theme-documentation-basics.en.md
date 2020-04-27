@@ -26,7 +26,7 @@ Discover what the Hugo - **LoveIt** theme is all about and the core-concepts beh
 
 Thanks to the simplicity of Hugo, [Hugo](https://gohugo.io/) is the only dependency of this theme.
 
-Just install latest version of [:(far fa-file-archive): Hugo extended (> 0.62.0)](https://gohugo.io/getting-started/installing/) for your OS (**Windows**, **Linux**, **macOS**).
+Just install latest version of [:(far fa-file-archive fa-fw): Hugo extended (> 0.62.0)](https://gohugo.io/getting-started/installing/) for your OS (**Windows**, **Linux**, **macOS**).
 
 {{< admonition note "Why not support earlier versions of Hugo?" >}}
 Since [Markdown Render Hooks](https://gohugo.io/getting-started/configuration-markup/#markdown-render-hooks) was introduced in the [Hugo Christmas Edition](https://gohugo.io/news/0.62.0-relnotes/), this theme only supports Hugo versions above **0.62.0**.
@@ -53,7 +53,7 @@ cd my_website
 
 The **LoveIt** theme’s repository is: [https://github.com/dillonzq/LoveIt](https://github.com/dillonzq/LoveIt).
 
-You can download the [latest release :(far fa-file-archive): .zip file](https://github.com/dillonzq/LoveIt/releases) of the theme and extract it in the `themes` directory.
+You can download the [latest release :(far fa-file-archive fa-fw): .zip file](https://github.com/dillonzq/LoveIt/releases) of the theme and extract it in the `themes` directory.
 
 Alternatively, clone this repository to the `themes` directory:
 
@@ -92,6 +92,8 @@ theme = "LoveIt"
     identifier = "posts"
     # you can add extra information before the name (HTML format is supported), such as icons
     pre = ""
+    # you can add extra information after the name (HTML format is supported), such as icons
+    post = ""
     name = "Posts"
     url = "/posts/"
     # title will be shown when you hover on this menu link
@@ -100,6 +102,7 @@ theme = "LoveIt"
   [[menu.main]]
     identifier = "tags"
     pre = ""
+    post = ""
     name = "Tags"
     url = "/tags/"
     title = ""
@@ -107,6 +110,7 @@ theme = "LoveIt"
   [[menu.main]]
     identifier = "categories"
     pre = ""
+    post = ""
     name = "Categories"
     url = "/categories/"
     title = ""
@@ -199,6 +203,21 @@ Note that some of these parameters are explained in details in other sections of
   # {{< version 0.2.0 >}} date format
   dateFormat = "2006-01-02"
 
+  # {{< version 0.2.0 >}} App icon config
+  [params.app]
+    # optional site title override for the app when added to an iOS home screen or Android launcher
+    title = "LoveIt"
+    # whether to omit favicon resource links
+    noFavicon = false
+    # modern SVG favicon to use in place of older style .png and .ico files
+    svgFavicon = ""
+    # Android browser theme color
+    themeColor = "#ffffff"
+    # Safari mask icon color
+    iconColor = "#5bbad5"
+    # Windows v8-10 tile color
+    tileColor = "#da532c"
+
   # {{< version 0.2.0 >}} Search config
   [params.search]
     enable = true
@@ -286,69 +305,68 @@ Note that some of these parameters are explained in details in other sections of
   # Social config about the author
   [params.social]
     GitHub = "xxxx"
-    Linkedin = "xxxx"
+    Linkedin = ""
     Twitter = "xxxx"
     Instagram = "xxxx"
-    Email = "xxxx@xxxx.com"
     Facebook = "xxxx"
     Telegram = "xxxx"
-    # Medium = "xxxx"
-    # Gitlab = "xxxx"
-    Youtubelegacy = "xxxx"
-    # Youtubecustom = "xxxx"
-    # Youtubechannel = "xxxx"
-    # Tumblr ="xxxx"
-    # Quora = "xxxx"
-    # Keybase = "xxxx"
-    # Pinterest = "xxxx"
-    # Reddit = "xxxx"
-    # Codepen = "xxxx"
-    # FreeCodeCamp = "xxxx"
-    # Bitbucket = "xxxx"
-    # Stackoverflow = "xxxx"
-    # Weibo = "xxxx"
-    # Odnoklassniki = "xxxx"
-    # VK = "xxxx"
-    # Flickr = "xxxx"
-    # Xing = "xxxx"
-    # Snapchat = "xxxx"
-    # Soundcloud = "xxxx"
-    # Spotify = "xxxx"
-    # Bandcamp = "xxxx"
-    # Paypal = "xxxx"
-    # Fivehundredpx = "xxxx"
-    # Mix = "xxxx"
-    # Goodreads = "xxxx"
-    # Lastfm = "xxxx"
-    # Foursquare = "xxxx"
-    # Hackernews = "xxxx"
-    # Kickstarter = "xxxx"
-    # Patreon = "xxxx"
-    # Steam = "xxxx"
-    # Twitch = "xxxx"
-    # Strava = "xxxx"
-    # Skype = "xxxx"
-    # Whatsapp = "xxxx"
-    # Zhihu = "xxxx"
-    # Douban = "xxxx"
-    # Angellist = "xxxx"
-    # Slidershare = "xxxx"
-    # Jsfiddle = "xxxx"
-    # Deviantart = "xxxx"
-    # Behance = "xxxx"
-    # Dribble = "xxxx"
-    # Wordpress = "xxxx"
-    # Vine = "xxxx"
-    # Googlescholar = "xxxx"
-    # Researchgate = "xxxx"
-    # Mastodon = "xxxx"
-    # MastodonPrefix = "https://mastodon.technology/"
-    # Thingiverse = "xxxx"
-    # Devto = "xxxx"
-    # Gitea = "xxxx"
-    # XMPP = "xxxx"
-    # Matrix = "xxxx"
-    # Bilibili = "xxxx"
+    Medium = ""
+    Gitlab = ""
+    Youtubelegacy = ""
+    Youtubecustom = ""
+    Youtubechannel = ""
+    Tumblr = ""
+    Quora = ""
+    Keybase = ""
+    Pinterest = ""
+    Reddit = ""
+    Codepen = ""
+    FreeCodeCamp = ""
+    Bitbucket = ""
+    Stackoverflow = ""
+    Weibo = ""
+    Odnoklassniki = ""
+    VK = ""
+    Flickr = ""
+    Xing = ""
+    Snapchat = ""
+    Soundcloud = ""
+    Spotify = ""
+    Bandcamp = ""
+    Paypal = ""
+    Fivehundredpx = ""
+    Mix = ""
+    Goodreads = ""
+    Lastfm = ""
+    Foursquare = ""
+    Hackernews = ""
+    Kickstarter = ""
+    Patreon = ""
+    Steam = ""
+    Twitch = ""
+    Strava = ""
+    Skype = ""
+    Whatsapp = ""
+    Zhihu = ""
+    Douban = ""
+    Angellist = ""
+    Slidershare = ""
+    Jsfiddle = ""
+    Deviantart = ""
+    Behance = ""
+    Dribbble = ""
+    Wordpress = ""
+    Vine = ""
+    Googlescholar = ""
+    Researchgate = ""
+    Mastodon = ""
+    Thingiverse = ""
+    Devto = ""
+    Gitea = ""
+    XMPP = ""
+    Matrix = ""
+    Bilibili = ""
+    Email = "xxxx@xxxx.com"
     RSS = true # {{< version 0.2.0 >}}
 
   # {{< version 0.2.0 changed >}} Page config
@@ -357,10 +375,10 @@ Note that some of these parameters are explained in details in other sections of
     hiddenFromHomePage = false
     # {{< version 0.2.0 >}} whether to hide a page from search results
     hiddenFromSearch = false
+    # {{< version 0.2.0 >}} whether to enable twemoji
+    twemoji = false
     # whether to enable lightgallery
     lightgallery = false
-    # {{< version 0.2.0 >}} whether to show the copy button of the code block
-    copyCode = true
     # {{< version 0.2.0 >}} whether to enable the ruby extended syntax
     ruby = true
     # {{< version 0.2.0 >}} whether to enable the fraction extended syntax
@@ -388,6 +406,12 @@ Note that some of these parameters are explained in details in other sections of
       copyTex = true
       # KaTeX extension mhchem
       mhchem = true
+    # {{< version 0.2.0 >}} Code config
+    [params.page.code]
+      # whether to show the copy button of the code block
+      copy = true
+      # the maximum number of lines of displayed code by default
+      maxShownLines = 10
     # {{< version 0.2.0 >}} {{< link "https://docs.mapbox.com/mapbox-gl-js" "Mapbox GL JS" >}} config
     [params.page.mapbox]
       # access token of Mapbox GL JS
@@ -457,8 +481,6 @@ Note that some of these parameters are explained in details in other sections of
         appId = ""
         appKey = ""
         placeholder = ""
-        notify = false
-        verify = true
         avatar = "mp"
         meta= ""
         pageSize = 10
@@ -482,6 +504,9 @@ Note that some of these parameters are explained in details in other sections of
         colorful = true
         dislikes = false
         outlined = false
+      # {{< version 0.2.0 >}} {{< link "https://commento.io/" "Commento" >}} comment config
+      [params.page.comment.commento]
+        enable = false
     # {{< version 0.2.0 >}} SEO config
     [params.page.seo]
       # Publisher info
@@ -530,20 +555,25 @@ Note that some of these parameters are explained in details in other sections of
   [params.cdn]
     # {{< version 0.2.0 >}} {{< link "https://github.com/necolas/normalize.css" "normalize.css" >}}@8.0.1
     normalizeCSS = ''
-    # {{< link "https://fontawesome.com/" "fontawesome-free" >}}@5.12.1
+    # {{< link "https://fontawesome.com/" "fontawesome-free" >}}@5.13.0
     fontawesomeFreeCSS = ''
+    # {{< version 0.2.0 >}} {{< link "https://github.com/simple-icons/simple-icons" "simple-icons" >}}@2.9.0
+    # ('https://cdn.jsdelivr.net/npm/simple-icons@v2/icons/')
+    simpleIconsPrefix = ''
     # animate.css@3.7.2 https://github.com/daneden/animate.css
     animateCSS = ''
-    # {{< link "https://github.com/cferdinandi/smooth-scroll" "smooth-scroll" >}}@16.1.2
+    # {{< link "https://github.com/cferdinandi/smooth-scroll" "smooth-scroll" >}}@16.1.3
     smoothScrollJS = ''
     # {{< version 0.2.0 >}} {{< link "https://github.com/algolia/autocomplete.js" "autocomplete.js" >}}@0.37.1
     autocompleteJS = ''
     # {{< version 0.2.0 >}} {{< link "https://lunrjs.com/" "lunr.js" >}}@2.3.8
     lunrJS = ''
-    # {{< version 0.2.0 >}} {{< link "https://github.com/algolia/algoliasearch-client-javascript" "algoliasearch" >}}@4.1.0
+    # {{< version 0.2.0 >}} {{< link "https://github.com/algolia/algoliasearch-client-javascript" "algoliasearch" >}}@4.2.0
     algoliasearchJS = ''
     # {{< link "https://github.com/aFarkas/lazysizes" "lazysizes" >}}@5.2.0
     lazysizesJS = ''
+    # {{< version 0.2.0 >}} {{< link "https://github.com/twitter/twemoji" "twemoji" >}}@12.1.5
+    twemojiJS = ''
     # {{< link "https://github.com/sachinchoolur/lightgallery.js" "lightgallery.js" >}}@1.1.3 lg-thumbnail@1.1.0 lg-zoom@1.1.0
     lightgalleryCSS = ''
     lightgalleryJS = ''
@@ -551,9 +581,9 @@ Note that some of these parameters are explained in details in other sections of
     lightgalleryZoomJS = ''
     # {{< version 0.2.0 >}} {{< link "https://github.com/zenorocha/clipboard.js" "clipboard.js" >}}@2.0.6
     clipboardJS = ''
-    # {{< link "https://github.com/ellisonleao/sharer.js" "sharer" >}}@0.4.0
+    # {{< link "https://github.com/ellisonleao/sharer.js" "sharer.js" >}}@0.4.0
     sharerJS = ''
-    # {{< link "https://github.com/alexmacarthur/typeit" "typeit" >}}@6.5.1
+    # {{< link "https://github.com/alexmacarthur/typeit" "typeit" >}}@7.0.3
     typeitJS = ''
     # {{< link "https://github.com/KaTeX/KaTeX" "katex" >}}@0.11.1
     katexCSS = ''
@@ -562,12 +592,12 @@ Note that some of these parameters are explained in details in other sections of
     katexCopyTexCSS = ''
     katexCopyTexJS = ''
     katexMhchemJS = ''
-    # {{< link "https://github.com/knsv/mermaid" "mermaid" >}}@8.4.8
+    # {{< link "https://github.com/knsv/mermaid" "mermaid" >}}@8.5.0
     mermaidJS = ''
-    # {{< link "https://echarts.apache.org/" "echarts" >}}@4.6.0
+    # {{< link "https://echarts.apache.org/" "echarts" >}}@4.7.0
     echartsJS = ''
     echartsMacaronsJS = ''
-    # {{< version 0.2.0 >}} {{< link "https://docs.mapbox.com/mapbox-gl-js" mapbox-gl >}}@1.8.1
+    # {{< version 0.2.0 >}} {{< link "https://docs.mapbox.com/mapbox-gl-js" mapbox-gl >}}@1.9.1
     mapboxGLCSS = ''
     mapboxGLJS = ''
     # {{< link "https://github.com/MoePlayer/APlayer" "aplayer" >}}@1.10.1
@@ -578,7 +608,7 @@ Note that some of these parameters are explained in details in other sections of
     # {{< link "https://github.com/gitalk/gitalk" "gitalk" >}}@1.6.2
     gitalkCSS = ''
     gitalkJS = ''
-    # {{< link "https://valine.js.org/" "valine" >}}@1.3.10
+    # {{< link "https://valine.js.org/" "valine" >}}@1.4.9
     valineJS = ''
 
 # Markup related config in Hugo
@@ -668,6 +698,37 @@ smoothScrollJS = 'https://cdn.jsdelivr.net/npm/smooth-scroll@16/dist/smooth-scro
 ```
 {{< /admonition >}}
 
+{{< admonition tip "Tips about social Configuration" >}}
+{{< version 0.2.0 >}}
+
+You can directly set your ID to get a default social link and its icon:
+
+```toml
+[params.social]
+  Mastodon = "@xxxx"
+```
+
+The social link generated is `https://mastodon.technology/@xxxx`.
+
+Or You can set more options through a dict:
+
+```toml
+[params.social]
+  [params.social.Mastodon]
+    # weight when arranging icons (the greater the weight, the later the icon is positioned)
+    weight = 0
+    # your social ID
+    id = "@xxxx"
+    # prefix of your social link
+    prefix = "https://mastodon.social/"
+    # content hovering on the icon
+    title = "Mastodon"
+```
+
+The default configuration of all supported social links is located in `themes/LoveIt/assets/data/social.yaml`,
+which is you can refer to.
+{{< /admonition >}}
+
 ![Complete configuration preview](/images/theme-documentation-basics/complete-configuration-preview.png "Complete configuration preview")
 
 ### 3.2 Favicons, Browserconfig, Manifest
@@ -714,14 +775,15 @@ In `config/css/_custom.scss`, you can add some css style code to customize the s
 
 ### 4.1 Compatibility {#language-compatibility}
 
-| Language           | Hugo Code | HTML `lang` Attribute | Theme Docs              | Lunr.js Support         |
-|:------------------ |:---------:|:---------------------:|:-----------------------:|:-----------------------:|
-| English            | `en`      | `en`                  | :(far fa-check-square): | :(far fa-check-square): |
-| Simplified Chinese | `zh-cn`   | `zh-CN`               | :(far fa-check-square): | :(far fa-check-square): |
-| French             | `fr`      | `fr`                  | :(far fa-square):       | :(far fa-check-square): |
-| Polish             | `pl`      | `pl`                  | :(far fa-square):       | :(far fa-square):       |
+| Language             | Hugo Code | HTML `lang` Attribute | Theme Docs                    | Lunr.js Support               |
+|:-------------------- |:---------:|:---------------------:|:-----------------------------:|:-----------------------------:|
+| English              | `en`      | `en`                  | :(far fa-check-square fa-fw): | :(far fa-check-square fa-fw): |
+| Simplified Chinese   | `zh-cn`   | `zh-CN`               | :(far fa-check-square fa-fw): | :(far fa-check-square fa-fw): |
+| French               | `fr`      | `fr`                  | :(far fa-square fa-fw):       | :(far fa-check-square fa-fw): |
+| Polish               | `pl`      | `pl`                  | :(far fa-square fa-fw):       | :(far fa-square fa-fw):       |
+| Brazilian Portuguese | `pt-br`   | `pt-BR`               | :(far fa-square fa-fw):       | :(far fa-check-square fa-fw): |
 
-:(far fa-kiss-wink-heart): **Feel free to [contribute](https://github.com/dillonzq/LoveIt/pulls)!**
+:(far fa-kiss-wink-heart fa-fw): **Feel free to [contribute](https://github.com/dillonzq/LoveIt/pulls)!**
 
 ### 4.2 Basic Configuration
 
@@ -742,6 +804,7 @@ defaultContentLanguage = "en"
     [[languages.en.menu.main]]
       identifier = "posts"
       pre = ""
+      post = ""
       name = "Posts"
       url = "/posts/"
       title = ""
@@ -749,6 +812,7 @@ defaultContentLanguage = "en"
     [[languages.en.menu.main]]
       identifier = "tags"
       pre = ""
+      post = ""
       name = "Tags"
       url = "/tags/"
       title = ""
@@ -756,6 +820,7 @@ defaultContentLanguage = "en"
     [[languages.en.menu.main]]
       identifier = "categories"
       pre = ""
+      post = ""
       name = "Categories"
       url = "/categories/"
       title = ""
@@ -772,6 +837,7 @@ defaultContentLanguage = "en"
     [[languages.zh-cn.menu.main]]
       identifier = "posts"
       pre = ""
+      post = ""
       name = "文章"
       url = "/posts/"
       title = ""
@@ -779,6 +845,7 @@ defaultContentLanguage = "en"
     [[languages.zh-cn.menu.main]]
       identifier = "tags"
       pre = ""
+      post = ""
       name = "标签"
       url = "/tags/"
       title = ""
@@ -786,6 +853,7 @@ defaultContentLanguage = "en"
     [[languages.zh-cn.menu.main]]
       identifier = "categories"
       pre = ""
+      post = ""
       name = "分类"
       url = "/categories/"
       title = ""
@@ -799,6 +867,7 @@ defaultContentLanguage = "en"
     [[languages.fr.menu.main]]
       identifier = "posts"
       pre = ""
+      post = ""
       name = "Postes"
       url = "/posts/"
       title = ""
@@ -806,6 +875,7 @@ defaultContentLanguage = "en"
     [[languages.fr.menu.main]]
       identifier = "tags"
       pre = ""
+      post = ""
       name = "Balises"
       url = "/tags/"
       title = ""
@@ -814,6 +884,7 @@ defaultContentLanguage = "en"
       identifier = "categories"
       name = "Catégories"
       pre = ""
+      post = ""
       url = "/categories/"
       title = ""
       weight = 3

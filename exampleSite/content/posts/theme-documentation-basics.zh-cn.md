@@ -26,7 +26,7 @@ toc:
 
 由于 Hugo 提供的便利性, [Hugo](https://gohugo.io/) 本身是这个主题唯一的依赖.
 
-直接安装满足你操作系统 (**Windows**, **Linux**, **macOS**) 的最新版本 [:(far fa-file-archive): Hugo extended (> 0.62.0)](https://gohugo.io/getting-started/installing/).
+直接安装满足你操作系统 (**Windows**, **Linux**, **macOS**) 的最新版本 [:(far fa-file-archive fa-fw): Hugo extended (> 0.62.0)](https://gohugo.io/getting-started/installing/).
 
 {{< admonition note "为什么不支持早期版本的 Hugo?" >}}
 由于 [Markdown 渲染钩子函数](https://gohugo.io/getting-started/configuration-markup/#markdown-render-hooks) 在 [Hugo 圣诞节版本](https://gohugo.io/news/0.62.0-relnotes/) 中被引入, 本主题只支持高于 **0.62.0** 的 Hugo 版本.
@@ -53,7 +53,7 @@ cd my_website
 
 **LoveIt** 主题的仓库是: [https://github.com/dillonzq/LoveIt](https://github.com/dillonzq/LoveIt).
 
-你可以下载主题的 [最新版本 :(far fa-file-archive): .zip 文件](https://github.com/dillonzq/LoveIt/releases) 并且解压放到 `themes` 目录.
+你可以下载主题的 [最新版本 :(far fa-file-archive fa-fw): .zip 文件](https://github.com/dillonzq/LoveIt/releases) 并且解压放到 `themes` 目录.
 
 另外, 也可以直接把这个主题克隆到 `themes` 目录:
 
@@ -95,6 +95,8 @@ theme = "LoveIt"
     identifier = "posts"
     # 你可以在名称 (允许 HTML 格式) 之前添加其他信息, 例如图标
     pre = ""
+    # 你可以在名称 (允许 HTML 格式) 之后添加其他信息, 例如图标
+    post = ""
     name = "文章"
     url = "/posts/"
     # 当你将鼠标悬停在此菜单链接上时, 将显示的标题
@@ -103,6 +105,7 @@ theme = "LoveIt"
   [[menu.main]]
     identifier = "tags"
     pre = ""
+    post = ""
     name = "标签"
     url = "/tags/"
     title = ""
@@ -110,6 +113,7 @@ theme = "LoveIt"
   [[menu.main]]
     identifier = "categories"
     pre = ""
+    post = ""
     name = "分类"
     url = "/categories/"
     title = ""
@@ -202,6 +206,21 @@ hugo
   # {{< version 0.2.0 >}} 日期格式
   dateFormat = "2006-01-02"
 
+  # {{< version 0.2.0 >}} 应用图标配置
+  [params.app]
+    # 当添加到 iOS 主屏幕或者 Android 启动器时的标题, 覆盖默认标题
+    title = "LoveIt"
+    # 是否隐藏网站图标资源链接
+    noFavicon = false
+    # 更现代的 SVG 网站图标, 可替代旧的 .png 和 .ico 文件
+    svgFavicon = ""
+    # Android 浏览器主题色
+    themeColor = "#ffffff"
+    # Safari 图标颜色
+    iconColor = "#5bbad5"
+    # Windows v8-10磁贴颜色
+    tileColor = "#da532c"
+
   # {{< version 0.2.0 >}} 搜索配置
   [params.search]
     enable = true
@@ -289,69 +308,68 @@ hugo
   # 作者的社交信息设置
   [params.social]
     GitHub = "xxxx"
-    # Linkedin = "xxxx"
-    # Twitter = "xxxx"
-    # Instagram = "xxxx"
+    Linkedin = ""
+    Twitter = "xxxx"
+    Instagram = "xxxx"
+    Facebook = "xxxx"
+    Telegram = "xxxx"
+    Medium = ""
+    Gitlab = ""
+    Youtubelegacy = ""
+    Youtubecustom = ""
+    Youtubechannel = ""
+    Tumblr = ""
+    Quora = ""
+    Keybase = ""
+    Pinterest = ""
+    Reddit = ""
+    Codepen = ""
+    FreeCodeCamp = ""
+    Bitbucket = ""
+    Stackoverflow = ""
+    Weibo = ""
+    Odnoklassniki = ""
+    VK = ""
+    Flickr = ""
+    Xing = ""
+    Snapchat = ""
+    Soundcloud = ""
+    Spotify = ""
+    Bandcamp = ""
+    Paypal = ""
+    Fivehundredpx = ""
+    Mix = ""
+    Goodreads = ""
+    Lastfm = ""
+    Foursquare = ""
+    Hackernews = ""
+    Kickstarter = ""
+    Patreon = ""
+    Steam = ""
+    Twitch = ""
+    Strava = ""
+    Skype = ""
+    Whatsapp = ""
+    Zhihu = ""
+    Douban = ""
+    Angellist = ""
+    Slidershare = ""
+    Jsfiddle = ""
+    Deviantart = ""
+    Behance = ""
+    Dribbble = ""
+    Wordpress = ""
+    Vine = ""
+    Googlescholar = ""
+    Researchgate = ""
+    Mastodon = ""
+    Thingiverse = ""
+    Devto = ""
+    Gitea = ""
+    XMPP = ""
+    Matrix = ""
+    Bilibili = ""
     Email = "xxxx@xxxx.com"
-    # Facebook = "xxxx"
-    # Telegram = "xxxx"
-    # Medium = "xxxx"
-    # Gitlab = "xxxx"
-    # Youtubelegacy = "xxxx"
-    # Youtubecustom = "xxxx"
-    # Youtubechannel = "xxxx"
-    # Tumblr ="xxxx"
-    # Quora = "xxxx"
-    # Keybase = "xxxx"
-    # Pinterest = "xxxx"
-    # Reddit = "xxxx"
-    # Codepen = "xxxx"
-    # FreeCodeCamp = "xxxx"
-    # Bitbucket = "xxxx"
-    # Stackoverflow = "xxxx"
-    Weibo = "xxxx"
-    # Odnoklassniki = "xxxx"
-    # VK = "xxxx"
-    # Flickr = "xxxx"
-    # Xing = "xxxx"
-    # Snapchat = "xxxx"
-    # Soundcloud = "xxxx"
-    # Spotify = "xxxx"
-    # Bandcamp = "xxxx"
-    # Paypal = "xxxx"
-    # Fivehundredpx = "xxxx"
-    # Mix = "xxxx"
-    # Goodreads = "xxxx"
-    # Lastfm = "xxxx"
-    # Foursquare = "xxxx"
-    # Hackernews = "xxxx"
-    # Kickstarter = "xxxx"
-    # Patreon = "xxxx"
-    # Steam = "xxxx"
-    # Twitch = "xxxx"
-    # Strava = "xxxx"
-    # Skype = "xxxx"
-    # Whatsapp = "xxxx"
-    Zhihu = "xxxx"
-    Douban = "xxxx"
-    # Angellist = "xxxx"
-    # Slidershare = "xxxx"
-    # Jsfiddle = "xxxx"
-    # Deviantart = "xxxx"
-    # Behance = "xxxx"
-    # Dribble = "xxxx"
-    # Wordpress = "xxxx"
-    # Vine = "xxxx"
-    # Googlescholar = "xxxx"
-    # Researchgate = "xxxx"
-    # Mastodon = "xxxx"
-    # MastodonPrefix = "https://mastodon.technology/"
-    # Thingiverse = "xxxx"
-    # Devto = "xxxx"
-    # Gitea = "xxxx"
-    # XMPP = "xxxx"
-    # Matrix = "xxxx"
-    Bilibili = "xxxx"
     RSS = true # {{< version 0.2.0 >}}
 
   # {{< version 0.2.0 changed >}} 文章页面配置
@@ -360,10 +378,10 @@ hugo
     hiddenFromHomePage = false
     # {{< version 0.2.0 >}} 是否在搜索结果中隐藏一篇文章
     hiddenFromSearch = false
-    # 是否在文章页面使用 lightgallery
+    # {{< version 0.2.0 >}} 是否使用 twemoji
+    twemoji = false
+    # 是否使用 lightgallery
     lightgallery = true
-    # {{< version 0.2.0 >}} 是否显示代码块的复制按钮
-    copyCode = true
     # {{< version 0.2.0 >}} 是否使用 ruby 扩展语法
     ruby = true
     # {{< version 0.2.0 >}} 是否使用 fraction 扩展语法
@@ -378,16 +396,22 @@ hugo
       enable = true
       # 是否使目录自动折叠展开
       auto = true
+    # {{< version 0.2.0 >}} 代码配置
+    [params.page.code]
+      # 是否显示代码块的复制按钮
+      copy = true
+      # 默认展开显示的代码行数
+      maxShownLines = 10
     # {{< version 0.2.0 changed >}} {{< link "https://katex.org/" KaTeX >}} 数学公式
     [params.page.math]
       enable = true
       # 默认块定界符是 $$ ... $$ 和 \\[ ... \\]
       blockLeftDelimiter = ""
       blockRightDelimiter = ""
+<<<<<<< HEAD
       # 默认内联定界符是 $ ... $ 和 \\( ... \\)
-      inlineLeftDelimiter = ""
+=======
       inlineRightDelimiter = ""
-      # KaTeX 插件 copy_tex
       copyTex = true
       # KaTeX 插件 mhchem
       mhchem = true
@@ -460,8 +484,11 @@ hugo
         appId = ""
         appKey = ""
         placeholder = "Your comment ..."
+<<<<<<< HEAD
         notify = false
         verify = true
+=======
+>>>>>>> upstream/develop
         avatar = "mp"
         meta= ""
         pageSize = 10
@@ -485,6 +512,12 @@ hugo
         colorful = true
         dislikes = false
         outlined = false
+<<<<<<< HEAD
+=======
+      # {{< version 0.2.0 >}} {{< link "https://commento.io/" "Commento" >}} 评论系统设置
+      [params.page.comment.commento]
+        enable = false
+>>>>>>> upstream/develop
     # {{< version 0.2.0 >}} SEO config
     [params.page.seo]
       # 出版者信息
@@ -533,20 +566,36 @@ hugo
   [params.cdn]
     # {{< version 0.2.0 >}} {{< link "https://github.com/necolas/normalize.css" "normalize.css" >}}@8.0.1
     normalizeCSS = ''
+<<<<<<< HEAD
     # {{< link "https://fontawesome.com/" "fontawesome-free" >}}@5.12.1
+=======
+    # {{< link "https://fontawesome.com/" "fontawesome-free" >}}@5.13.0
+>>>>>>> upstream/develop
     fontawesomeFreeCSS = ''
+    # {{< version 0.2.0 >}} {{< link "https://github.com/simple-icons/simple-icons" "simple-icons" >}}@2.9.0
+    # ('https://cdn.jsdelivr.net/npm/simple-icons@v2/icons/')
+    simpleIconsPrefix = ''
     # animate.css@3.7.2 https://github.com/daneden/animate.css
     animateCSS = ''
-    # {{< link "https://github.com/cferdinandi/smooth-scroll" "smooth-scroll" >}}@16.1.2
+    # {{< link "https://github.com/cferdinandi/smooth-scroll" "smooth-scroll" >}}@16.1.3
     smoothScrollJS = ''
     # {{< version 0.2.0 >}} {{< link "https://github.com/algolia/autocomplete.js" "autocomplete.js" >}}@0.37.1
     autocompleteJS = ''
     # {{< version 0.2.0 >}} {{< link "https://lunrjs.com/" "lunr.js" >}}@2.3.8
     lunrJS = ''
+<<<<<<< HEAD
     # {{< version 0.2.0 >}} {{< link "https://github.com/algolia/algoliasearch-client-javascript" "algoliasearch" >}}@4.1.0
     algoliasearchJS = ''
     # {{< link "https://github.com/aFarkas/lazysizes" "lazysizes" >}}@5.2.0
     lazysizesJS = ''
+=======
+    # {{< version 0.2.0 >}} {{< link "https://github.com/algolia/algoliasearch-client-javascript" "algoliasearch" >}}@4.2.0
+    algoliasearchJS = ''
+    # {{< link "https://github.com/aFarkas/lazysizes" "lazysizes" >}}@5.2.0
+    lazysizesJS = ''
+    # {{< version 0.2.0 >}} {{< link "https://github.com/twitter/twemoji" "twemoji" >}}@12.1.5
+    twemojiJS = ''
+>>>>>>> upstream/develop
     # {{< link "https://github.com/sachinchoolur/lightgallery.js" "lightgallery.js" >}}@1.1.3 lg-thumbnail@1.1.0 lg-zoom@1.1.0
     lightgalleryCSS = ''
     lightgalleryJS = ''
@@ -554,9 +603,15 @@ hugo
     lightgalleryZoomJS = ''
     # {{< version 0.2.0 >}} {{< link "https://github.com/zenorocha/clipboard.js" "clipboard.js" >}}@2.0.6
     clipboardJS = ''
+<<<<<<< HEAD
     # {{< link "https://github.com/ellisonleao/sharer.js" "sharer" >}}@0.4.0
     sharerJS = ''
     # {{< link "https://github.com/alexmacarthur/typeit" "typeit" >}}@6.5.1
+=======
+    # {{< link "https://github.com/ellisonleao/sharer.js" "sharer.js" >}}@0.4.0
+    sharerJS = ''
+    # {{< link "https://github.com/alexmacarthur/typeit" "typeit" >}}@7.0.3
+>>>>>>> upstream/develop
     typeitJS = ''
     # {{< link "https://github.com/KaTeX/KaTeX" "katex" >}}@0.11.1
     katexCSS = ''
@@ -565,12 +620,16 @@ hugo
     katexCopyTexCSS = ''
     katexCopyTexJS = ''
     katexMhchemJS = ''
-    # {{< link "https://github.com/knsv/mermaid" "mermaid" >}}@8.4.8
+    # {{< link "https://github.com/knsv/mermaid" "mermaid" >}}@8.5.0
     mermaidJS = ''
-    # {{< link "https://echarts.apache.org/" "echarts" >}}@4.6.0
+    # {{< link "https://echarts.apache.org/" "echarts" >}}@4.7.0
     echartsJS = ''
     echartsMacaronsJS = ''
+<<<<<<< HEAD
     # {{< version 0.2.0 >}} {{< link "https://docs.mapbox.com/mapbox-gl-js" mapbox-gl >}}@1.8.1
+=======
+    # {{< version 0.2.0 >}} {{< link "https://docs.mapbox.com/mapbox-gl-js" mapbox-gl >}}@1.9.1
+>>>>>>> upstream/develop
     mapboxGLCSS = ''
     mapboxGLJS = ''
     # {{< link "https://github.com/MoePlayer/APlayer" "aplayer" >}}@1.10.1
@@ -581,7 +640,7 @@ hugo
     # {{< link "https://github.com/gitalk/gitalk" "gitalk" >}}@1.6.2
     gitalkCSS = ''
     gitalkJS = ''
-    # {{< link "https://valine.js.org/" "valine" >}}@1.3.10
+    # {{< link "https://valine.js.org/" "valine" >}}@1.4.9
     valineJS = ''
 
 # Hugo 解析文档的配置
@@ -671,6 +730,37 @@ smoothScrollJS = 'https://cdn.jsdelivr.net/npm/smooth-scroll@16/dist/smooth-scro
 ```
 {{< /admonition >}}
 
+{{< admonition tip "关于社交链接配置的技巧" >}}
+{{< version 0.2.0 >}}
+
+你可以直接配置你的社交 ID 来生成一个默认社交链接和图标:
+
+```toml
+[params.social]
+  Mastodon = "@xxxx"
+```
+
+生成的社交链接是 `https://mastodon.technology/@xxxx`.
+
+或者你可以通过一个字典来设置更多的选项:
+
+```toml
+[params.social]
+  [params.social.Mastodon]
+    # 排列图标时的权重 (权重越大, 图标的位置越靠后)
+    weight = 0
+    # 你的社交 ID
+    id = "@xxxx"
+    # 你的社交链接的前缀
+    prefix = "https://mastodon.social/"
+    # 当鼠标停留在图标上时的提示内容
+    title = "Mastodon"
+```
+
+所有支持的社交链接的默认配置位于 `themes/LoveIt/assets/data/social.yaml`.
+你可以参考它来配置你的社交链接.
+{{< /admonition >}}
+
 ![完整配置下的预览](/images/theme-documentation-basics/complete-configuration-preview.zh-cn.png "完整配置下的预览")
 
 ### 3.2 网站图标, 浏览器配置, 网站清单
@@ -719,6 +809,7 @@ $code-font-family: Fira Mono, Source Code Pro, Menlo, Consolas, Monaco, monospac
 
 | 语言 | Hugo 代码 | HTML `lang` 属性 | 主题文档 | Lunr.js 支持 |
 |:---- |:----:|:----:|:----:|:----:|
+<<<<<<< HEAD
 | 英语 | `en` | `en` | :(far fa-check-square): | :(far fa-check-square): |
 | 简体中文 | `zh-cn` | `zh-CN` | :(far fa-check-square): | :(far fa-check-square): |
 | 法语 | `fr` | `fr` | :(far fa-square): | :(far fa-check-square): |
@@ -726,6 +817,16 @@ $code-font-family: Fira Mono, Source Code Pro, Menlo, Consolas, Monaco, monospac
 
 :(far fa-kiss-wink-heart): **请自由地[贡献代码](https://github.com/dillonzq/LoveIt/pulls)!**
 
+=======
+| 英语 | `en` | `en` | :(far fa-check-square fa-fw): | :(far fa-check-square fa-fw): |
+| 简体中文 | `zh-cn` | `zh-CN` | :(far fa-check-square fa-fw): | :(far fa-check-square fa-fw): |
+| 法语 | `fr` | `fr` | :(far fa-square fa-fw): | :(far fa-check-square fa-fw): |
+| 波兰语 | `pl` | `pl` | :(far fa-square fa-fw): | :(far fa-square fa-fw): |
+| 巴西葡萄牙语 | `pt-br` | `pt-BR` | :(far fa-square fa-fw): | :(far fa-check-square fa-fw): |
+
+:(far fa-kiss-wink-heart fa-fw): **请自由地[贡献代码](https://github.com/dillonzq/LoveIt/pulls)!**
+
+>>>>>>> upstream/develop
 ### 4.2 基本配置
 
 学习了 [Hugo如何处理多语言网站](https://gohugo.io/content-management/multilingual) 之后, 请在 [站点配置](#site-configuration) 中定义你的网站语言.
@@ -745,6 +846,7 @@ defaultContentLanguage = "zh-cn"
     [[languages.en.menu.main]]
       identifier = "posts"
       pre = ""
+      post = ""
       name = "Posts"
       url = "/posts/"
       title = ""
@@ -752,6 +854,7 @@ defaultContentLanguage = "zh-cn"
     [[languages.en.menu.main]]
       identifier = "tags"
       pre = ""
+      post = ""
       name = "Tags"
       url = "/tags/"
       title = ""
@@ -759,6 +862,7 @@ defaultContentLanguage = "zh-cn"
     [[languages.en.menu.main]]
       identifier = "categories"
       pre = ""
+      post = ""
       name = "Categories"
       url = "/categories/"
       title = ""
@@ -775,6 +879,7 @@ defaultContentLanguage = "zh-cn"
     [[languages.zh-cn.menu.main]]
       identifier = "posts"
       pre = ""
+      post = ""
       name = "文章"
       url = "/posts/"
       title = ""
@@ -782,6 +887,7 @@ defaultContentLanguage = "zh-cn"
     [[languages.zh-cn.menu.main]]
       identifier = "tags"
       pre = ""
+      post = ""
       name = "标签"
       url = "/tags/"
       title = ""
@@ -789,6 +895,7 @@ defaultContentLanguage = "zh-cn"
     [[languages.zh-cn.menu.main]]
       identifier = "categories"
       pre = ""
+      post = ""
       name = "分类"
       url = "/categories/"
       title = ""
@@ -802,6 +909,7 @@ defaultContentLanguage = "zh-cn"
     [[languages.fr.menu.main]]
       identifier = "posts"
       pre = ""
+      post = ""
       name = "Postes"
       url = "/posts/"
       title = ""
@@ -809,14 +917,16 @@ defaultContentLanguage = "zh-cn"
     [[languages.fr.menu.main]]
       identifier = "tags"
       pre = ""
+      post = ""
       name = "Balises"
       url = "/tags/"
       title = ""
       weight = 2
     [[languages.fr.menu.main]]
       identifier = "categories"
-      name = "Catégories"
       pre = ""
+      post = ""
+      name = "Catégories"
       url = "/categories/"
       title = ""
       weight = 3
